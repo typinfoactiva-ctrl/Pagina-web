@@ -3,13 +3,15 @@
 
   // ===== HEADER SCROLL =====
   const header = document.querySelector('.header');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
 
   // ===== MOBILE MENU =====
   const menuToggle = document.getElementById('menuToggle');
@@ -19,24 +21,63 @@
     menuToggle.addEventListener('click', () => {
       navList.classList.toggle('active');
       const icon = menuToggle.querySelector('i');
-      icon.className = navList.classList.contains('active') 
-        ? 'fas fa-times' 
-        : 'fas fa-bars';
+      if (navList.classList.contains('active')) {
+        icon.className = 'fas fa-times';
+        navList.style.display = 'flex';
+        navList.style.flexDirection = 'column';
+        navList.style.position = 'absolute';
+        navList.style.top = '70px';
+        navList.style.left = '0';
+        navList.style.width = '100%';
+        navList.style.background = '#ffffff';
+        navList.style.padding = '1.5rem 2rem';
+        navList.style.gap = '0.8rem';
+        navList.style.zIndex = '999';
+        navList.style.boxShadow = '0 8px 30px rgba(0,0,0,0.15)';
+        navList.style.alignItems = 'flex-start';
+      } else {
+        icon.className = 'fas fa-bars';
+        navList.style.display = '';
+        navList.style.flexDirection = '';
+        navList.style.position = '';
+        navList.style.top = '';
+        navList.style.left = '';
+        navList.style.width = '';
+        navList.style.background = '';
+        navList.style.padding = '';
+        navList.style.gap = '';
+        navList.style.zIndex = '';
+        navList.style.boxShadow = '';
+        navList.style.alignItems = '';
+      }
     });
 
     navList.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navList.classList.remove('active');
-        menuToggle.querySelector('i').className = 'fas fa-bars';
+        const icon = menuToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+        navList.style.display = '';
+        navList.style.flexDirection = '';
+        navList.style.position = '';
+        navList.style.top = '';
+        navList.style.left = '';
+        navList.style.width = '';
+        navList.style.background = '';
+        navList.style.padding = '';
+        navList.style.gap = '';
+        navList.style.zIndex = '';
+        navList.style.boxShadow = '';
+        navList.style.alignItems = '';
       });
     });
   }
 
   // ===== ANIMACIONES SCROLL =====
   const animateElements = document.querySelectorAll(
-    '.mv-card, .value-card, .city-card, .contact-item'
+    '.intro, .mission, .vision, .cta, .intro-highlight, .intro-image-wrapper'
   );
-  
+
   const observerScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -54,7 +95,7 @@
   });
 
   // ===== CONTADOR DE AÑOS =====
-  const yearElements = document.querySelectorAll('.intro-stat .stat-number');
+  const yearElements = document.querySelectorAll('.intro-highlight strong');
   yearElements.forEach(el => {
     const target = el.textContent;
     if (target.includes('+')) return;

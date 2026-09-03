@@ -1,10 +1,12 @@
 (function() {
   'use strict';
 
-   const loader = document.getElementById('loader');
+  // ===== LOADER MEJORADO CON DEGRADADO =====
+  const loader = document.getElementById('loader');
   const mainContent = document.getElementById('main-content');
   const loaderBar = document.getElementById('loaderBar');
   const loaderText = document.querySelector('.loader-text');
+  const loaderPercentage = document.getElementById('loaderPercentage');
 
   let progress = 0;
   const duration = 2200; // 2.2 segundos
@@ -20,13 +22,20 @@
     
     loaderBar.style.width = percent + '%';
     
+    // Actualizar porcentaje
+    if (loaderPercentage) {
+      loaderPercentage.textContent = percent + '%';
+    }
+    
     // Cambiar texto según progreso
-    if (percent < 30) {
+    if (percent < 25) {
       loaderText.textContent = 'Inicializando servicios...';
-    } else if (percent < 60) {
+    } else if (percent < 50) {
       loaderText.textContent = 'Preparando experiencia...';
-    } else if (percent < 90) {
+    } else if (percent < 75) {
       loaderText.textContent = 'Cargando información...';
+    } else if (percent < 100) {
+      loaderText.textContent = 'Casi listo...';
     } else {
       loaderText.textContent = '¡Listo!';
     }
@@ -38,35 +47,33 @@
       setTimeout(() => {
         loader.classList.add('hidden');
         mainContent.style.display = 'block';
+        document.body.style.overflow = 'auto';
         // Iniciar animaciones de la página
         initPageAnimations();
-      }, 300);
+      }, 400);
     }
   }
 
   function initPageAnimations() {
-    // Aquí puedes inicializar los contadores, carrusel, etc.
-    // Ya están en el script principal, solo los llamamos
-    if (typeof initCounters === 'function') {
-      initCounters();
-    }
+    // Iniciar contadores
+    animateCounters();
+    // Iniciar carrusel si existe
     if (typeof initCarousel === 'function') {
       initCarousel();
     }
   }
 
-  // Iniciar loader
-  requestAnimationFrame(updateLoader);
-
   // ===== HEADER SCROLL =====
   const header = document.querySelector('.header');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
 
   // ===== MOBILE MENU =====
   const menuToggle = document.getElementById('menuToggle');
@@ -76,16 +83,108 @@
     menuToggle.addEventListener('click', () => {
       navList.classList.toggle('active');
       const icon = menuToggle.querySelector('i');
-      icon.className = navList.classList.contains('active') 
-        ? 'fas fa-times' 
-        : 'fas fa-bars';
+      if (navList.classList.contains('active')) {
+        icon.className = 'fas fa-times';
+        navList.style.display = 'flex';
+        navList.style.flexDirection = 'column';
+        navList.style.position = 'absolute';
+        navList.style.top = '70px';
+        navList.style.left = '0';
+        navList.style.width = '100%';
+        navList.style.background = '#ffffff';
+        navList.style.padding = '1.5rem';
+        navList.style.gap = '1.2rem';
+        navList.style.backdropFilter = 'blur(12px)';
+        navList.style.borderRadius = '0 0 24px 24px';
+        navList.style.zIndex = '999';
+        navList.style.boxShadow = '0 8px 30px rgba(0,0,0,0.15)';
+        navList.style.alignItems = 'center';
+        
+        const links = navList.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.color = '#1e2a33';
+        });
+      } else {
+        icon.className = 'fas fa-bars';
+        navList.style.display = '';
+        navList.style.flexDirection = '';
+        navList.style.position = '';
+        navList.style.top = '';
+        navList.style.left = '';
+        navList.style.width = '';
+        navList.style.background = '';
+        navList.style.padding = '';
+        navList.style.gap = '';
+        navList.style.backdropFilter = '';
+        navList.style.borderRadius = '';
+        navList.style.zIndex = '';
+        navList.style.boxShadow = '';
+        navList.style.alignItems = '';
+        
+        const links = navList.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.color = '';
+        });
+      }
     });
 
     navList.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navList.classList.remove('active');
-        menuToggle.querySelector('i').className = 'fas fa-bars';
+        const icon = menuToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+        navList.style.display = '';
+        navList.style.flexDirection = '';
+        navList.style.position = '';
+        navList.style.top = '';
+        navList.style.left = '';
+        navList.style.width = '';
+        navList.style.background = '';
+        navList.style.padding = '';
+        navList.style.gap = '';
+        navList.style.backdropFilter = '';
+        navList.style.borderRadius = '';
+        navList.style.zIndex = '';
+        navList.style.boxShadow = '';
+        navList.style.alignItems = '';
+        
+        const links = navList.querySelectorAll('a');
+        links.forEach(link => {
+          link.style.color = '';
+        });
       });
+    });
+  }
+
+  // ===== CONTADORES ANIMADOS =====
+  function animateCounters() {
+    const counters = [
+      { el: document.getElementById('counter1'), target: 27000000, suffix: 'M' },
+      { el: document.getElementById('counter2'), target: 3, suffix: '' },
+      { el: document.getElementById('counter3'), target: 187523, suffix: '' }
+    ];
+
+    counters.forEach((counter) => {
+      if (!counter.el) return;
+      let current = 0;
+      const duration = 2000;
+      const steps = 70;
+      const stepValue = Math.ceil(counter.target / steps);
+
+      const timer = setInterval(() => {
+        current += stepValue;
+        if (current >= counter.target) {
+          current = counter.target;
+          clearInterval(timer);
+        }
+        let display = current;
+        if (counter.suffix === 'M' && current >= 1000000) {
+          display = (current / 1000000).toFixed(1) + 'M';
+        } else if (counter.suffix === '') {
+          display = current.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+        counter.el.textContent = display;
+      }, duration / steps);
     });
   }
 
@@ -103,7 +202,9 @@
     if (index < 0) index = totalSlides - 1;
     if (index >= totalSlides) index = 0;
     currentIndex = index;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    if (track) {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
     dots.forEach((dot, i) => {
       dot.classList.toggle('active', i === currentIndex);
     });
@@ -112,8 +213,8 @@
   function nextSlide() { goToSlide(currentIndex + 1); }
   function prevSlide() { goToSlide(currentIndex - 1); }
 
-  prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
-  nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
+  if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
 
   dots.forEach((dot, index) => {
     dot.addEventListener('click', () => { goToSlide(index); resetAutoPlay(); });
@@ -137,75 +238,13 @@
   }
 
   const carousel = document.getElementById('heroCarousel');
-  carousel.addEventListener('mouseenter', stopAutoPlay);
-  carousel.addEventListener('mouseleave', startAutoPlay);
-  startAutoPlay();
-
-  // ===== CONTADORES =====
-  const counters = [
-    { id: 'counter1', target: 27000000 },
-    { id: 'counter2', target: 3 },
-    { id: 'counter3', target: 187523 }
-  ];
-
-  function formatNumber(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+    startAutoPlay();
   }
 
-  function animateCounter(element, target, duration = 2000) {
-    if (!element) return;
-    const startTime = performance.now();
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      let progress = Math.min(elapsed / duration, 1);
-      const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-      const currentValue = Math.floor(eased * target);
-      element.textContent = formatNumber(currentValue);
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        element.textContent = formatNumber(target);
-      }
-    }
-    requestAnimationFrame(update);
-  }
-
-  const statsGrid = document.querySelector('.stats-grid');
-  if (statsGrid) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          counters.forEach((c) => {
-            const el = document.getElementById(c.id);
-            if (el) animateCounter(el, c.target);
-          });
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.3 });
-    observer.observe(statsGrid);
-  }
-
-  // ===== ANIMACIONES SCROLL =====
-  const animateElements = document.querySelectorAll(
-    '.service-card, .testimonial-card, .contact-item'
-  );
-  
-  const observerScroll = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  animateElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(40px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-    observerScroll.observe(el);
-  });
+  // Iniciar loader
+  requestAnimationFrame(updateLoader);
 
 })();
