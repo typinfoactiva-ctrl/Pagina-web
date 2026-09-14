@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
 
@@ -50,7 +50,7 @@
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
-      <img src="video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img" />
+      <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img" />
     </a>
     <nav class="nav">
       <ul class="nav-list">
@@ -58,16 +58,16 @@
         <li class="nav-item">
           <a href="#" class="nav-link active">Inicio <span class="arrow">▼</span></a>
           <ul class="dropdown-menu-custom">
-            <li><a href="quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="../HTML/quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
           </ul>
         </li>
         <!-- Servicios con dropdown -->
         <li class="nav-item">
           <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
           <ul class="dropdown-menu-custom">
-            <li><a href="servicios.html#custodia"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
-            <li><a href="servicios.html#archivo-sitio"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
-            <li><a href="servicios.html#digitalizacion"><i class="fas fa-scan"></i> Digitalización de documentos</a></li>
+            <li><a href="../HTML/custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
+            <li><a href="../HTML/archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
+            <li><a href="../HTML/digitalizacion.html"><i class="fas fa-scan"></i> Digitalización de documentos</a></li>
             <li><a href="servicios.html#desarrollo"><i class="fas fa-code"></i> Desarrollo de software</a></li>
             <li><a href="servicios.html#resguardo"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
             <li><div class="dropdown-divider"></div></li>
@@ -79,7 +79,7 @@
         <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
       </ul>
     </nav>
-    <a href="#" class="btn-client"><i class="fas fa-user-lock"></i> Acceso Cliente</a>
+    <a href="../HTML/acceso-cliente.html" class="btn-client"><i class="fas fa-user-lock"></i> Acceso Cliente</a>
     <button class="menu-toggle" id="menuToggle">
       <i class="fas fa-bars"></i>
     </button>
@@ -91,7 +91,7 @@
       <!-- ===== SECCIÓN 1: HERO CON VIDEO (FONDO OSCURO) ===== -->
       <section class="hero-video section-dark" id="inicio">
         <video id="heroVideo" autoplay muted playsinline loop>
-          <source src="video_imagenes/INFOACTIVA.mp4" type="video/mp4" />
+          <source src="../video_imagenes/INFOACTIVA.mp4" type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
         <div class="overlay"></div>
@@ -126,36 +126,60 @@
         </div>
       </section>
 
-      <!-- ===== SECCIÓN 3: SERVICIOS (FONDO AZUL) ===== -->
-      <section class="services section-dark" id="servicios">
-        <div class="container">
-          <div class="section-header fade-in">
-            <span class="section-tag"><i class="fas fa-concierge-bell"></i> Servicios</span>
-            <h2 class="section-title">Soluciones integrales para <span class="highlight">tu empresa</span></h2>
-            <p class="section-desc">Ofrecemos un servicio totalmente completo en la gestión documental para tu organización.</p>
-          </div>
-          <div class="services-grid">
-            <div class="service-card fade-in-up">
-              <div class="service-icon"><i class="fas fa-archive"></i></div>
-              <h3>Administración y custodia</h3>
-              <p>Para documentación con baja tasa de consulta que ocupa valioso espacio físico en tus instalaciones.</p>
-              <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card fade-in-up" style="animation-delay: 0.2s;">
-              <div class="service-icon"><i class="fas fa-building"></i></div>
-              <h3>Archivos en sitio</h3>
-              <p>Administramos documentos en tus propias instalaciones o almacenes, sin necesidad de trasladarlos.</p>
-              <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card fade-in-up" style="animation-delay: 0.4s;">
-              <div class="service-icon"><i class="fas fa-scan"></i></div>
-              <h3>Digitalización de documentos</h3>
-              <p>Convertimos tus documentos físicos en imágenes electrónicas, preservando y agilizando la búsqueda.</p>
-              <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- ===== SECCIÓN 3: SERVICIOS (FONDO AZUL) ===== -->
+<section class="services section-dark" id="servicios">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag"><i class="fas fa-concierge-bell"></i> Servicios</span>
+      <h2 class="section-title">Soluciones integrales para <span class="highlight">tu empresa</span></h2>
+      <p class="section-desc">Ofrecemos un servicio totalmente completo en la gestión documental para tu organización.</p>
+    </div>
+    <div class="services-grid">
+      <!-- Servicio 1: Administración y custodia -->
+      <div class="service-card fade-in-up">
+        <div class="service-icon"><i class="fas fa-archive"></i></div>
+        <h3>Administración y custodia de documentos</h3>
+        <p>Para documentación con baja tasa de consulta que ocupa valioso espacio físico en tus instalaciones.</p>
+        <a href="../HTML/custodia.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Servicio 2: Administración de archivo en sitio -->
+      <div class="service-card fade-in-up" style="animation-delay: 0.1s;">
+        <div class="service-icon"><i class="fas fa-building"></i></div>
+        <h3>Administración de archivo en sitio</h3>
+        <p>Administramos documentos en tus propias instalaciones o almacenes, sin necesidad de trasladarlos.</p>
+        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Servicio 3: Digitalización de documentos -->
+      <div class="service-card fade-in-up" style="animation-delay: 0.2s;">
+        <div class="service-icon"><i class="fas fa-copy"></i></div>
+        <h3>Digitalización de documentos</h3>
+        <p>Convertimos tus documentos físicos en imágenes electrónicas, preservando y agilizando la búsqueda.</p>
+        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Servicio 4: Desarrollo de software -->
+      <div class="service-card fade-in-up" style="animation-delay: 0.3s;">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Desarrollo de software</h3>
+        <p>Creamos soluciones tecnológicas a medida para optimizar la gestión documental de tu empresa.</p>
+        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Servicio 5: Resguardo de medios magnéticos -->
+      <div class="service-card fade-in-up" style="animation-delay: 0.4s;">
+        <div class="service-icon"><i class="fas fa-database"></i></div>
+        <h3>Resguardo de medios magnéticos</h3>
+        <p>Custodia y preservación de discos duros, cintas de respaldo y otros dispositivos de almacenamiento.</p>
+        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Servicio 6: Seguridad -->
+      <div class="service-card fade-in-up" style="animation-delay: 0.5s;">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Seguridad</h3>
+        <p>Protegemos tu información con los más altos estándares de seguridad física y digital.</p>
+        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- ===== SECCIÓN 4: SEGURIDAD (FONDO BLANCO) ===== -->
       <section class="security section-white fade-in">
@@ -238,12 +262,7 @@
               <a href="#" class="btn-primary"><i class="fas fa-phone-alt"></i> Contáctanos ahora</a>
             </div>
             <div class="contact-grid">
-              <div class="contact-item fade-in-up" style="animation-delay: 0.1s;">
-                <div class="contact-icon"><i class="fas fa-briefcase"></i></div>
-                <h5>Contacto Comercial</h5>
-                <p><a href="mailto:comercial@infoactiva.com.bo">comercial@infoactiva.com.bo</a></p>
-                <p><strong>60108969</strong></p>
-              </div>
+
               <div class="contact-item fade-in-up" style="animation-delay: 0.2s;">
                 <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <h5>Santa Cruz</h5>
@@ -280,7 +299,7 @@
         <div class="footer-content">
           <div class="footer-brand">
             <a href="index.html" class="logo">
-              <img src="video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img" />
+              <img src="../video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img" />
             </a>
             <p>Gestión documental con experiencia, calidad y compromiso boliviano.</p>
           </div>
@@ -325,7 +344,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../JS/script.js"></script>
   <script>
     (function() {
       // ===== LOADER =====

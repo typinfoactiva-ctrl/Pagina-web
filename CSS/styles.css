@@ -335,6 +335,24 @@ body {
   cursor: pointer;
   background: none;
   border: none;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--pantone-173);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
 
 .nav-link:hover,
@@ -737,7 +755,7 @@ body {
 }
 
 /* ============================================================
-   SERVICIOS
+   SERVICIOS (6 TARJETAS CON ICONOS)
    ============================================================ */
 .services {
   padding: 4rem 1.5rem;
@@ -745,7 +763,7 @@ body {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -758,6 +776,7 @@ body {
   transition: 0.35s ease;
   border: 1px solid rgba(22, 51, 64, 0.06);
   color: #1e2a33;
+  text-align: center;
 }
 
 .service-card:hover {
@@ -769,8 +788,9 @@ body {
 .service-card h3 {
   color: var(--pantone-546) !important;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: var(--font-primary);
+  margin-bottom: 0.8rem;
 }
 
 .service-card p {
@@ -779,6 +799,7 @@ body {
   line-height: 1.6;
   font-family: var(--font-primary);
   font-weight: 400;
+  margin-bottom: 1.2rem;
 }
 
 .service-icon {
@@ -791,7 +812,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
 .service-link {
@@ -1302,10 +1323,15 @@ body {
   box-shadow: 0 12px 24px rgba(216, 78, 31, 0.08);
 }
 
-/* Escalonado de animaciones */
+/* ============================================================
+   ESCALONADO DE ANIMACIONES
+   ============================================================ */
 .services-grid .service-card:nth-child(1) { animation-delay: 0.1s; }
-.services-grid .service-card:nth-child(2) { animation-delay: 0.25s; }
-.services-grid .service-card:nth-child(3) { animation-delay: 0.4s; }
+.services-grid .service-card:nth-child(2) { animation-delay: 0.2s; }
+.services-grid .service-card:nth-child(3) { animation-delay: 0.3s; }
+.services-grid .service-card:nth-child(4) { animation-delay: 0.4s; }
+.services-grid .service-card:nth-child(5) { animation-delay: 0.5s; }
+.services-grid .service-card:nth-child(6) { animation-delay: 0.6s; }
 
 .testimonials-grid .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
 .testimonials-grid .testimonial-card:nth-child(2) { animation-delay: 0.25s; }
@@ -1386,6 +1412,10 @@ html {
     background: transparent;
     color: var(--pantone-173);
   }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1424,44 +1454,8 @@ html {
   .footer-brand .logo-img {
     height: 30px;
   }
-}
-/* ============================================================
-   LÍNEA INFERIOR EN ENLACES DEL MENÚ
-   ============================================================ */
-.nav-link {
-  color: #1e2a33 !important;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: 0.25s ease;
-  font-family: var(--font-primary);
-  padding: 0.5rem 0;
-  display: block;
-  cursor: pointer;
-  background: none;
-  border: none;
-  position: relative;
-}
 
-/* Línea inferior que aparece al hacer hover */
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: var(--pantone-173);
-  border-radius: 4px;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--pantone-173) !important;
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
