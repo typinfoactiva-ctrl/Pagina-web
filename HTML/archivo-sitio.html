@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Administración de Archivos en Sitio · Infoactiva</title>
+
+  <!-- Bootstrap 5 -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <!-- Google Font - MONSERRAT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CSS/styles-archivo-sitio.css">
+</head>
+
+<body>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL
+       ========================================================= -->
+  <div id="main-content">
+
+    <!-- =======================================================
+         HEADER
+         ======================================================= -->
+    <header class="header">
+
+      <div class="header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+          <img
+            src="../video_imagenes/LOGO 1.jpg"
+            alt="Infoactiva"
+            class="logo-img"
+          >
+        </a>
+
+        <!-- NAVEGACIÓN -->
+        <nav class="nav">
+
+          <ul class="nav-list">
+
+            <!-- INICIO -->
+            <li class="nav-item">
+
+              <a href="index.html" class="nav-link">
+                Inicio
+                <span class="arrow">▼</span>
+              </a>
+
+              <ul class="dropdown-menu-custom">
+
+                <li>
+                  <a href="quienes-somos.html">
+                    <i class="fas fa-users"></i>
+                    Quiénes Somos
+                  </a>
+                </li>
+
+              </ul>
+
+            </li>
+
+            <!-- SERVICIOS -->
+            <li class="nav-item">
+
+              <a href="#" class="nav-link">
+                Servicios
+                <span class="arrow">▼</span>
+              </a>
+
+              <ul class="dropdown-menu-custom">
+
+                <li>
+                  <a href="custodia.html">
+                    <i class="fas fa-archive"></i>
+                    Administración y custodia de documentos
+                  </a>
+                </li>
+
+                <li>
+                  <a href="archivo-sitio.html">
+                    <i class="fas fa-building"></i>
+                    Administración de archivo en sitio
+                  </a>
+                </li>
+
+                <li>
+                  <a href="digitalizacion.html">
+                    <i class="fas fa-file-image"></i>
+                    Digitalización de documentos
+                  </a>
+                </li>
+
+                <li>
+                  <a href="desarrollo.html">
+                    <i class="fas fa-code"></i>
+                    Desarrollo de software
+                  </a>
+                </li>
+
+                <li>
+                  <a href="resguardo.html">
+                    <i class="fas fa-database"></i>
+                    Resguardo de medios magnéticos
+                  </a>
+                </li>
+
+                <li>
+                  <div class="dropdown-divider"></div>
+                </li>
+
+                <li>
+                  <a href="seguridad.html">
+                    <i class="fas fa-shield-alt"></i>
+                    Seguridad
+                  </a>
+                </li>
+
+              </ul>
+
+            </li>
+
+            <!-- NOTICIAS -->
+            <li class="nav-item">
+
+              <a href="noticias.html" class="nav-link">
+                <i class="fas fa-newspaper"></i>
+                Noticias
+              </a>
+
+            </li>
+
+            <!-- PREGUNTAS -->
+            <li class="nav-item">
+
+              <a href="preguntas.html" class="nav-link">
+                <i class="fas fa-question-circle"></i>
+                Preguntas Frecuentes
+              </a>
+
+            </li>
+
+            <!-- CONTACTO -->
+            <li class="nav-item">
+
+              <a href="contacto.html" class="nav-link">
+                <i class="fas fa-envelope"></i>
+                Contacto
+              </a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <!-- ACCESO CLIENTE -->
+        <a href="#" class="btn-client">
+          <i class="fas fa-user-lock"></i>
+          Acceso Cliente
+        </a>
+
+        <!-- MENÚ RESPONSIVE -->
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+
+    </header>
+
+    <!-- =======================================================
+         CONTENIDO
+         ======================================================= -->
+    <main>
+
+      <!-- =====================================================
+           HERO
+           ===================================================== -->
+      <section class="hero-archivo section-dark">
+
+        <div class="container">
+
+          <div class="hero-archivo-content">
+
+            <span class="hero-badge">
+              <i class="fas fa-building"></i>
+              Servicio
+            </span>
+
+            <h1>
+              Administración de <span>Archivo en Sitio</span>
+            </h1>
+
+            <p>
+              Gestionamos tus documentos en tus propias instalaciones
+              sin necesidad de trasladarlos.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           INTRO - DESCRIPCIÓN
+           ===================================================== -->
+      <section class="intro section-white fade-in">
+
+        <div class="container">
+
+          <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+              <div class="intro-text">
+
+                <span class="section-tag">
+                  <i class="fas fa-info-circle"></i>
+                  Descripción del servicio
+                </span>
+
+                <h2>
+                  Gestión documental en tus
+                  <span class="highlight">propias instalaciones</span>
+                </h2>
+
+                <p>
+                  Este servicio se presta en sus mismas instalaciones o
+                  almacenes (cliente) sin necesidad de llevarlos a otro lugar.
+                </p>
+
+                <p>
+                  Los archivos administrados bajo esta modalidad,
+                  generalmente corresponde a información activa que registra
+                  una alta tasa de consulta.
+                </p>
+
+                <p>
+                  <strong>Ejemplos:</strong> Files de clientes, fichas médicas,
+                  movimientos diarios, cardex, etc.
+                </p>
+
+                <p>
+                  Para estos efectos, trasladamos e instalamos nuestra
+                  infraestructura tecnológica y recurso humano a las
+                  instalaciones de nuestro cliente.
+                </p>
+
+                <!-- CARACTERÍSTICAS -->
+                <div class="intro-features">
+
+                  <div class="intro-feature">
+                    <div class="intro-feature-icon">
+                      <i class="fas fa-home"></i>
+                    </div>
+                    <div>
+                      <strong>En tus instalaciones</strong>
+                      <span>Sin necesidad de trasladar documentos</span>
+                    </div>
+                  </div>
+
+                  <div class="intro-feature">
+                    <div class="intro-feature-icon">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                      <strong>Recurso humano propio</strong>
+                      <span>Personal capacitado </span>
+                    </div>
+                  </div>
+
+                  <div class="intro-feature">
+                    <div class="intro-feature-icon">
+                      <i class="fas fa-microchip"></i>
+                    </div>
+                    <div>
+                      <strong>Infraestructura tecnológica</strong>
+                      <span>Instalamos nuestra tecnología en tu empresa</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <div class="intro-image-wrapper">
+
+                <div class="intro-image-decoration"></div>
+
+                <img
+                  src="../video_imagenes/archivo_sitio_1.jpg"
+                  alt="Archivo en sitio"
+                  class="intro-main-image"
+                  onerror="this.src='../video_imagenes/cajas_2.jpg'"
+                >
+
+                <div class="intro-image-label">
+
+                  <i class="fas fa-building"></i>
+
+                  <div>
+                    <strong>Archivo en sitio</strong>
+                    <span>Gestión documental </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           TESTIMONIO
+           ===================================================== -->
+      <section class="testimonial section-dark fade-in">
+
+        <div class="container">
+
+          <div class="testimonial-content">
+
+            <div class="testimonial-quote">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "El servicio de archivo en sitio nos ha permitido mantener
+                nuestros documentos activos siempre disponibles sin perder
+                el control de nuestra información."
+              </p>
+            </div>
+
+            <div class="testimonial-author">
+
+              <div class="author-image">
+                <i class="fas fa-user-circle"></i>
+              </div>
+
+              <div class="author-info">
+                <h4>ELBA RAMA</h4>
+                <span>Directora de AJProJuMi</span>
+                <span class="author-date">Montevideo - Uruguay · 23 de mayo de 2018</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           BENEFICIOS
+           ===================================================== -->
+      <section class="benefits section-white fade-in">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <span class="section-tag">
+              <i class="fas fa-star"></i>
+              Beneficios
+            </span>
+
+            <h2 class="section-title">
+              Ventajas del <span class="highlight">archivo en sitio</span>
+            </h2>
+
+            <p class="section-desc">
+              Una solución ideal para información activa con alta tasa
+              de consulta diaria.
+            </p>
+
+          </div>
+
+          <div class="benefits-grid">
+
+            <div class="benefit-card fade-in-up">
+              <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+              <h4>Acceso inmediato</h4>
+              <p>Tus documentos están disponibles al instante sin necesidad de traslados.</p>
+            </div>
+
+            <div class="benefit-card fade-in-up" style="animation-delay: 0.1s;">
+              <div class="benefit-icon"><i class="fas fa-user-cog"></i></div>
+              <h4>Personal especializado</h4>
+              <p>Contamos con personal capacitado trabajando in situ en tus instalaciones.</p>
+            </div>
+
+            <div class="benefit-card fade-in-up" style="animation-delay: 0.2s;">
+              <div class="benefit-icon"><i class="fas fa-laptop"></i></div>
+              <h4>Tecnología propia</h4>
+              <p>Implementamos nuestra infraestructura tecnológica en tu empresa.</p>
+            </div>
+
+            <div class="benefit-card fade-in-up" style="animation-delay: 0.3s;">
+              <div class="benefit-icon"><i class="fas fa-file-alt"></i></div>
+              <h4>Información activa</h4>
+              <p>Ideal para documentación con alta tasa de consulta diaria.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           CASOS DE USO
+           ===================================================== -->
+      <section class="use-cases section-dark fade-in">
+
+        <div class="container">
+
+          <div class="section-header">
+
+            <span class="section-tag tag-light">
+              <i class="fas fa-folder-open"></i>
+              Casos de uso
+            </span>
+
+            <h2 class="section-title">
+              ¿Qué tipo de <span class="highlight">documentos</span> gestionamos?
+            </h2>
+
+            <p class="section-desc">
+              Información activa que requiere consulta constante y disponibilidad inmediata.
+            </p>
+
+          </div>
+
+          <div class="use-cases-grid">
+
+            <div class="use-case fade-in-up">
+              <div class="use-case-icon"><i class="fas fa-users"></i></div>
+              <h4>File de clientes</h4>
+              <p>Gestión de expedientes y carpetas de clientes con alta rotación.</p>
+            </div>
+
+            <div class="use-case fade-in-up" style="animation-delay: 0.1s;">
+              <div class="use-case-icon"><i class="fas fa-heartbeat"></i></div>
+              <h4>Fichas médicas</h4>
+              <p>Administración de historiales clínicos y expedientes médicos.</p>
+            </div>
+
+            <div class="use-case fade-in-up" style="animation-delay: 0.2s;">
+              <div class="use-case-icon"><i class="fas fa-exchange-alt"></i></div>
+              <h4>Movimientos diarios</h4>
+              <p>Documentación de operaciones y transacciones cotidianas.</p>
+            </div>
+
+            <div class="use-case fade-in-up" style="animation-delay: 0.3s;">
+              <div class="use-case-icon"><i class="fas fa-list-ul"></i></div>
+              <h4>Cardex</h4>
+              <p>Control y seguimiento de inventarios y movimientos de productos.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =====================================================
+           CTA
+           ===================================================== -->
+      <section class="cta section-white fade-in">
+
+        <div class="container">
+
+          <div class="cta-content">
+
+            <span class="section-tag">
+              <i class="fas fa-rocket"></i>
+              Infoactiva
+            </span>
+
+            <h2>
+              ¿Necesitas gestionar tu <span>archivo activo</span>?
+            </h2>
+
+            <p>
+              Contáctanos y descubre cómo podemos instalar nuestro equipo
+              y tecnología directamente en tu empresa.
+            </p>
+
+            <div class="cta-buttons">
+
+              <a href="contacto.html" class="btn-primary">
+                Solicita una cotización
+                <i class="fas fa-arrow-right"></i>
+              </a>
+
+              <a href="servicios.html" class="btn-outline">
+                Ver más servicios
+                <i class="fas fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- =======================================================
+         WHATSAPP
+         ======================================================= -->
+    <a
+      href="#"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- =======================================================
+         FOOTER
+         ======================================================= -->
+    <footer class="footer section-dark">
+
+      <div class="footer-inner">
+
+        <div class="footer-content">
+
+          <!-- MARCA -->
+          <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+
+              <img
+                src="../video_imagenes/LOGO 2.png"
+                alt="Infoactiva"
+                class="logo-img"
+              >
+
+            </a>
+
+            <p>
+              Gestión documental con experiencia,
+              calidad y compromiso boliviano.
+            </p>
+
+          </div>
+
+          <!-- ENLACES -->
+          <div class="footer-links">
+
+            <!-- EMPRESA -->
+            <div class="footer-col">
+
+              <h5>Empresa</h5>
+
+              <ul>
+
+                <li>
+                  <a href="index.html">
+                    Inicio
+                  </a>
+                </li>
+
+                <li>
+                  <a href="quienes-somos.html">
+                    Quiénes Somos
+                  </a>
+                </li>
+
+                <li>
+                  <a href="servicios.html">
+                    Servicios
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!-- SOPORTE -->
+            <div class="footer-col">
+
+              <h5>Soporte</h5>
+
+              <ul>
+
+                <li>
+                  <a href="preguntas.html">
+                    FAQ
+                  </a>
+                </li>
+
+                <li>
+                  <a href="contacto.html">
+                    Contacto
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Acceso Cliente
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!-- LEGAL -->
+            <div class="footer-col">
+
+              <h5>Legal</h5>
+
+              <ul>
+
+                <li>
+                  <a href="#">
+                    Política de privacidad
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Términos y condiciones
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+          <p>
+            &copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz
+          </p>
+
+          <div class="footer-social">
+
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../JS/script-archivo-sitio.js"></script>
+
+</body>
+</html>
