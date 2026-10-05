@@ -4,29 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infoactiva · Gestión Documental</title>
-  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Google Font - MONSERRAT -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-   <link rel="stylesheet" href="../CSS/styles.css" />
+  <link rel="stylesheet" href="../CSS/styles.css" />
 </head>
 <body>
 
-  <!-- ===== LOADER MEJORADO ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== LOADER ===== -->
   <div id="loader">
     <div class="loader-content">
-      <div class="loader-icon-wrapper">
-        <div class="loader-icon-circle">
-          <i class="fas fa-file-alt"></i>
-        </div>
-        <div class="loader-icon-pulse"></div>
-      </div>
-      <div class="loader-logo">
-        <span>Info<span>activa</span></span>
+      <div class="loader-logo-wrapper">
+        <img src="../video_imagenes/LOGO 4.png" alt="Infoactiva" class="loader-logo-img" />
       </div>
       <div class="loader-bar-container">
         <div class="loader-bar" id="loaderBar">
@@ -36,214 +29,468 @@
       </div>
       <p class="loader-text">Transformando tu gestión documental</p>
       <div class="loader-dots">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
   </div>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <div id="main-content" style="display:none;">
 
     <!-- ===== HEADER ===== -->
-<header class="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img" />
-    </a>
-    <nav class="nav">
-      <ul class="nav-list">
-        <!-- Inicio con dropdown -->
-        <li class="nav-item">
-          <a href="#" class="nav-link active">Inicio <span class="arrow">▼</span></a>
-          <ul class="dropdown-menu-custom">
-            <li><a href="../HTML/quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img" />
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list" id="navList">
+            <li class="nav-mobile-header">
+              <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="nav-mobile-logo" />
+              <button class="nav-close" id="navClose" aria-label="Cerrar menú" type="button">
+                <i class="fas fa-times"></i>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Inicio <span class="arrow">▼</span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
+                <li><a href="archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
+                <li><a href="digitalizacion.html"><i class="fas fa-copy"></i> Digitalización de documentos</a></li>
+                <li><a href="automatizacion_de_procesos.html"><i class="fas fa-robot"></i> Automatización de procesos</a></li>
+                <li><a href="resguardo-de-medios-magneticos.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
+                <li><div class="dropdown-divider"></div></li>
+                <li><a href="seguridad.html"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="noticias-publicas.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="preguntas-frecuentes.html" class="nav-link"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
           </ul>
-        </li>
-        <!-- Servicios con dropdown -->
-        <li class="nav-item">
-          <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
-          <ul class="dropdown-menu-custom">
-            <li><a href="../HTML/custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
-            <li><a href="../HTML/archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
-            <li><a href="../HTML/digitalizacion.html"><i class="fas fa-scan"></i> Digitalización de documentos</a></li>
-            <li><a href="servicios.html#desarrollo"><i class="fas fa-code"></i> Desarrollo de software</a></li>
-            <li><a href="servicios.html#resguardo"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
-            <li><div class="dropdown-divider"></div></li>
-            <li><a href="servicios.html#seguridad"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
-        <li class="nav-item"><a href="preguntas.html" class="nav-link"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
-        <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
-      </ul>
-    </nav>
-    <a href="../HTML/acceso-cliente.html" class="btn-client"><i class="fas fa-user-lock"></i> Acceso Cliente</a>
-    <button class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</header>
+        </nav>
+
+        <div class="header-actions">
+
+          <!-- ===== CHATBOT IA ===== -->
+          <div class="chatbot-widget" id="chatbotWidget">
+            <div class="chatbot-popup" id="chatbotPopup">
+              <div class="chatbot-header">
+                <div class="chatbot-header-left">
+                  <div class="chatbot-avatar">
+                    <i class="fas fa-robot"></i>
+                    <span class="chatbot-status-dot"></span>
+                  </div>
+                  <div class="chatbot-info">
+                    <strong>Asistente Infoactiva</strong>
+                    <span>IA · Responde al instante</span>
+                  </div>
+                </div>
+                <div class="chatbot-header-actions">
+                  <button class="chatbot-btn-clear" id="chatbotClear" title="Nueva conversación">
+                    <i class="fas fa-rotate-right"></i>
+                  </button>
+                  <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="chatbot-body" id="chatbotBody">
+                <div class="chatbot-message bot">
+                  <div class="chatbot-msg-avatar"><i class="fas fa-robot"></i></div>
+                  <div class="chatbot-msg-content">
+                    <p>¡Hola! 👋 Soy el asistente virtual de <strong>Infoactiva</strong>.</p>
+                    <p>Puedo ayudarte con:</p>
+                    <ul>
+                      <li>📁 Nuestros servicios</li>
+                      <li>💰 Cotizaciones</li>
+                      <li>📍 Sucursales y contactos</li>
+                      <li>🔒 Seguridad y custodia</li>
+                    </ul>
+                    <p>🕐 <strong>Horario:</strong> Lun–Vie 08:00–17:00 · Sáb 09:00–12:30</p>
+                    <p>¿En qué te ayudo hoy?</p>
+                  </div>
+                </div>
+
+                <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+                  <button data-msg="¿Qué servicios ofrecen?">📁 Servicios</button>
+                  <button data-msg="Quiero una cotización">💰 Cotización</button>
+                  <button data-msg="¿Dónde están ubicados?">📍 Ubicaciones</button>
+                  <button data-msg="¿Cómo garantizan la seguridad?">🔒 Seguridad</button>
+                  <button data-msg="¿Cuál es el horario de atención?">🕐 Horario</button>
+                </div>
+              </div>
+
+              <div class="chatbot-footer">
+                <div class="chatbot-input-wrapper">
+                  <textarea id="chatbotInput" placeholder="Escribe tu pregunta..." rows="1" maxlength="500"></textarea>
+                  <button class="chatbot-send" id="chatbotSend" aria-label="Enviar">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+                <div class="chatbot-footer-hint">
+                  <i class="fas fa-shield-alt"></i> Respuestas generadas por IA · Infoactiva
+                </div>
+              </div>
+            </div>
+
+            <button class="chatbot-float" id="chatbotToggle" aria-label="Abrir chat">
+              <div class="chatbot-mascot">
+                <div class="mascot-head">
+                  <div class="mascot-eye left"></div>
+                  <div class="mascot-eye right"></div>
+                  <div class="mascot-mouth"></div>
+                </div>
+                <div class="mascot-body">
+                  <div class="mascot-arm left"></div>
+                  <div class="mascot-arm right"></div>
+                </div>
+                <div class="mascot-shadow"></div>
+              </div>
+              <span class="chatbot-badge">IA</span>
+              <span class="chatbot-pulse"></span>
+              <div class="chatbot-tooltip">¿Hablamos? 💬</div>
+            </button>
+          </div>
+
+          <a href="acceso-cliente.html" class="btn-client">
+            <i class="fas fa-user-lock"></i> Acceso Cliente
+          </a>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank" class="social-link facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/infoactiva_/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@infoactiva_" target="_blank" class="social-link tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
 
     <main>
 
-      <!-- ===== SECCIÓN 1: HERO CON VIDEO (FONDO OSCURO) ===== -->
+      <!-- ===== HERO ===== -->
       <section class="hero-video section-dark" id="inicio">
         <video id="heroVideo" autoplay muted playsinline loop>
           <source src="../video_imagenes/INFOACTIVA.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
         </video>
         <div class="overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
         <div class="hero-content">
           <span class="hero-badge"><i class="fas fa-rocket"></i> Innovación documental</span>
           <h1>Gestión documental <br><span class="highlight">inteligente</span></h1>
-          <p>Transformamos la manera en que tu empresa administra, protege y digitaliza su información.</p>
-          <a href="#stats" class="btn-descubrir" id="btnDescubrir">Descubrir <i class="fas fa-arrow-right"></i></a>
+          <p class="hero-subtitle">
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </p>
+          <a href="#stats" class="btn-descubrir" id="btnDescubrir">
+            <span>Descubrir</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </section>
 
-      <!-- ===== SECCIÓN 2: STATS (FONDO BLANCO) ===== -->
-      <section class="stats section-white fade-in" id="stats">
+      <!-- ===== STATS ===== -->
+      <section class="stats section-white" id="stats">
         <div class="container">
           <div class="stats-grid">
-            <div class="stat-card fade-in-up">
+            <div class="stat-card" data-tilt>
+              <div class="stat-shine"></div>
               <div class="stat-icon"><i class="fas fa-file-pdf"></i></div>
               <div class="stat-number"><span id="counter1">0</span></div>
               <div class="stat-label">Hojas digitalizadas</div>
             </div>
-            <div class="stat-card fade-in-up" style="animation-delay: 0.2s;">
-              <div class="stat-icon"><i class="fas fa-store-alt"></i></div>
-              <div class="stat-number"><span id="counter2">0</span></div>
-              <div class="stat-label">Sucursales</div>
-            </div>
-            <div class="stat-card fade-in-up" style="animation-delay: 0.4s;">
+            <div class="stat-card" data-tilt>
+              <div class="stat-shine"></div>
               <div class="stat-icon"><i class="fas fa-boxes"></i></div>
               <div class="stat-number"><span id="counter3">0</span></div>
               <div class="stat-label">Cajas en custodia</div>
             </div>
+            <div class="stat-card" data-tilt>
+              <div class="stat-shine"></div>
+              <div class="stat-icon"><i class="fas fa-store-alt"></i></div>
+              <div class="stat-number"><span id="counter2">0</span></div>
+              <div class="stat-label">Sucursales en Bolivia</div>
+            </div>
           </div>
         </div>
       </section>
 
-<!-- ===== SECCIÓN 3: SERVICIOS (FONDO AZUL) ===== -->
-<section class="services section-dark" id="servicios">
-  <div class="container">
-    <div class="section-header fade-in">
-      <span class="section-tag"><i class="fas fa-concierge-bell"></i> Servicios</span>
-      <h2 class="section-title">Soluciones integrales para <span class="highlight">tu empresa</span></h2>
-      <p class="section-desc">Ofrecemos un servicio totalmente completo en la gestión documental para tu organización.</p>
-    </div>
-    <div class="services-grid">
-      <!-- Servicio 1: Administración y custodia -->
-      <div class="service-card fade-in-up">
-        <div class="service-icon"><i class="fas fa-archive"></i></div>
-        <h3>Administración y custodia de documentos</h3>
-        <p>Para documentación con baja tasa de consulta que ocupa valioso espacio físico en tus instalaciones.</p>
-        <a href="../HTML/custodia.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <!-- Servicio 2: Administración de archivo en sitio -->
-      <div class="service-card fade-in-up" style="animation-delay: 0.1s;">
-        <div class="service-icon"><i class="fas fa-building"></i></div>
-        <h3>Administración de archivo en sitio</h3>
-        <p>Administramos documentos en tus propias instalaciones o almacenes, sin necesidad de trasladarlos.</p>
-        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <!-- Servicio 3: Digitalización de documentos -->
-      <div class="service-card fade-in-up" style="animation-delay: 0.2s;">
-        <div class="service-icon"><i class="fas fa-copy"></i></div>
-        <h3>Digitalización de documentos</h3>
-        <p>Convertimos tus documentos físicos en imágenes electrónicas, preservando y agilizando la búsqueda.</p>
-        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <!-- Servicio 4: Desarrollo de software -->
-      <div class="service-card fade-in-up" style="animation-delay: 0.3s;">
-        <div class="service-icon"><i class="fas fa-code"></i></div>
-        <h3>Desarrollo de software</h3>
-        <p>Creamos soluciones tecnológicas a medida para optimizar la gestión documental de tu empresa.</p>
-        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <!-- Servicio 5: Resguardo de medios magnéticos -->
-      <div class="service-card fade-in-up" style="animation-delay: 0.4s;">
-        <div class="service-icon"><i class="fas fa-database"></i></div>
-        <h3>Resguardo de medios magnéticos</h3>
-        <p>Custodia y preservación de discos duros, cintas de respaldo y otros dispositivos de almacenamiento.</p>
-        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <!-- Servicio 6: Seguridad -->
-      <div class="service-card fade-in-up" style="animation-delay: 0.5s;">
-        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Seguridad</h3>
-        <p>Protegemos tu información con los más altos estándares de seguridad física y digital.</p>
-        <a href="servicios.html" class="service-link">Conoce más <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
+      <!-- ===== SERVICIOS ===== -->
+      <section class="services section-dark" id="servicios">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
 
-      <!-- ===== SECCIÓN 4: SEGURIDAD (FONDO BLANCO) ===== -->
-      <section class="security section-white fade-in">
+        <div class="container position-relative">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-concierge-bell"></i> Servicios</span>
+            <h2 class="section-title">Soluciones integrales para <span class="highlight">tu empresa</span></h2>
+            <p class="section-desc">Ofrecemos un servicio totalmente completo en la gestión documental para tu organización.</p>
+          </div>
+
+          <div class="loss-aversion-banner">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span><strong>El 60% de las empresas pierde información crítica</strong> por no digitalizar a tiempo</span>
+          </div>
+
+          <div class="services-grid">
+            <a href="custodia.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-archive"></i></div>
+              <h3>Administración y custodia de documentos</h3>
+              <p>Para documentación con baja tasa de consulta que ocupa valioso espacio físico en tus instalaciones.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="archivo-sitio.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-building"></i></div>
+              <h3>Administración de archivo en sitio</h3>
+              <p>Administramos documentos en tus propias instalaciones o almacenes, sin necesidad de trasladarlos.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="digitalizacion.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-copy"></i></div>
+              <h3>Digitalización de documentos</h3>
+              <p>Convertimos tus documentos físicos en imágenes electrónicas, preservando y agilizando la búsqueda.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="automatizacion_de_procesos.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-code"></i></div>
+              <h3>Automatización de software</h3>
+              <p>Creamos soluciones tecnológicas a medida para optimizar la gestión documental de tu empresa.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="resguardo-de-medios-magneticos.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-database"></i></div>
+              <h3>Resguardo de medios magnéticos</h3>
+              <p>Custodia y preservación de discos duros, cintas de respaldo y otros dispositivos de almacenamiento.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="seguridad.html" class="service-card">
+              <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Seguridad</h3>
+              <p>Protegemos tu información con los más altos estándares de seguridad física y digital.</p>
+              <span class="service-link">Conoce más <i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
+
+          <div class="social-comparison">
+            <div class="social-comparison-item critical">
+              <i class="fas fa-times-circle"></i>
+              <div>
+                <strong>Sin Infoactiva</strong>
+                <span>Archivos físicos · Búsqueda lenta · Riesgo de pérdida</span>
+              </div>
+            </div>
+            <div class="social-comparison-item success">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong>Con Infoactiva</strong>
+                <span>Digitalizado · Búsqueda en segundos · 100% seguro</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SEGURIDAD ===== -->
+      <section class="security-section section-white">
         <div class="container">
-          <div class="security-card fade-in-up">
-            <div class="security-content">
-              <span class="security-badge"><i class="fas fa-shield-alt"></i> Seguridad certificada</span>
+          <div class="security-split">
+
+            <div class="security-visual">
+              <div class="security-image-frame">
+                <div class="security-badge-float">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Certificado</span>
+                </div>
+                <img src="../video_imagenes/cajas_1.jpeg" alt="Almacén seguro" onerror="this.src='../video_imagenes/LOGO 1.jpg'">
+                <div class="security-overlay"></div>
+              </div>
+
+              <div class="security-stat-float">
+                <i class="fas fa-lock"></i>
+                <div>
+                  <strong>100%</strong>
+                  <span>Confidencial</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="security-info">
+              <span class="section-tag"><i class="fas fa-shield-alt"></i> Seguridad garantizada</span>
               <h2>Almacenes seguros con <span class="highlight">control total</span></h2>
               <p>Contamos con almacenes con condiciones de temperatura controlada para guardar diferentes tipos de soportes electrónicos, manteniendo tu información a salvo.</p>
-              <a href="servicios.html" class="btn-primary">Conoce más <i class="fas fa-arrow-right"></i></a>
+
+              <ul class="security-list">
+                <li>
+                  <span class="security-list-icon"><i class="fas fa-thermometer-half"></i></span>
+                  <div>
+                    <strong>Control de temperatura</strong>
+                    <span>Ambientes monitoreados 24/7 para conservación óptima</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="security-list-icon"><i class="fas fa-fire-extinguisher"></i></span>
+                  <div>
+                    <strong>Protección contra incendios</strong>
+                    <span>Extintores tipo <strong>A, B, C</strong> con químico que <strong>no genera humedad</strong>, protegiendo tus documentos sin dañarlos.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="security-list-icon"><i class="fas fa-video"></i></span>
+                  <div>
+                    <strong>Vigilancia 24/7</strong>
+                    <span>Personal capacitado y cámaras de monitoreo continuo</span>
+                  </div>
+                </li>
+              </ul>
+
+              <a href="seguridad.html" class="btn-primary-magnetic">
+                <span>Conoce más</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <div class="security-features">
-              <div class="feature-item">
-                <i class="fas fa-thermometer-half"></i>
-                <span>Control de temperatura</span>
-              </div>
-              <div class="feature-item">
-                <i class="fas fa-fire-extinguisher"></i>
-                <span>Protección contra incendios</span>
-              </div>
-              <div class="feature-item">
-                <i class="fas fa-video"></i>
-                <span>Vigilancia 24/7</span>
-              </div>
+
+          </div>
+
+          <div class="authority-badges">
+            <div class="authority-badge">
+              <i class="fas fa-certificate"></i>
+              <span>Procesos Certificados</span>
             </div>
+            <div class="authority-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Estándares Internacionales</span>
+            </div>
+            <div class="authority-badge">
+              <i class="fas fa-lock"></i>
+              <span>Confidencialidad Garantizada</span>
+            </div>
+            <div class="authority-badge">
+              <i class="fas fa-award"></i>
+              <span>+15 años de experiencia</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== HORARIO DE ATENCIÓN ===== -->
+      <section class="schedule-section section-dark" id="horario">
+        <div class="blob blob-1"></div>
+        <div class="container position-relative">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-clock"></i> Horario</span>
+            <h2 class="section-title">Horario de <span class="highlight">atención</span></h2>
+            <p class="section-desc">Estamos disponibles para atender todas tus consultas y requerimientos.</p>
+          </div>
+
+          <div class="schedule-grid">
+            <div class="schedule-card">
+              <div class="schedule-icon"><i class="fas fa-briefcase"></i></div>
+              <h3>Lunes a Viernes</h3>
+              <p class="schedule-time">08:00 a.m. – 05:00 p.m.</p>
+              <span class="schedule-tag" id="scheduleStatusWeekday">Horario laboral</span>
+            </div>
+
+            <div class="schedule-card">
+              <div class="schedule-icon"><i class="fas fa-calendar-day"></i></div>
+              <h3>Sábados</h3>
+              <p class="schedule-time">09:00 a.m. – 12:30 p.m.</p>
+              <span class="schedule-tag" id="scheduleStatusSaturday">Medio día</span>
+            </div>
+
+            <div class="schedule-card">
+              <div class="schedule-icon"><i class="fas fa-headset"></i></div>
+              <h3>Canales disponibles</h3>
+              <p class="schedule-time">WhatsApp · Email · Chat IA</p>
+              <span class="schedule-tag">Atención 24/7 IA</span>
+            </div>
+          </div>
+
+          <div class="schedule-status" id="scheduleStatus">
+            <span class="schedule-status-dot"></span>
+            <span class="schedule-status-text">Verificando horario...</span>
           </div>
         </div>
       </section>
 
-      <!-- ===== SECCIÓN 5: TESTIMONIOS (FONDO AZUL) ===== -->
-      <section class="testimonials section-dark fade-in">
-        <div class="container">
+      <!-- ===== TESTIMONIOS ===== -->
+      <section class="testimonials section-dark">
+        <div class="blob blob-3"></div>
+
+        <div class="container position-relative">
           <div class="section-header">
             <span class="section-tag"><i class="fas fa-quote-left"></i> Testimonios</span>
             <h2 class="section-title">Lo que dicen <span class="highlight">nuestros clientes</span></h2>
           </div>
-          <div class="testimonials-grid">
-            <div class="testimonial-card fade-in-up">
-              <div class="testimonial-quote"><i class="fas fa-quote-left"></i> Infoactiva ha transformado nuestra gestión documental, reduciendo tiempos de búsqueda en un 70%.</div>
-              <div class="testimonial-author">
-                <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                <div>
-                  <h5>Carlos Mendoza</h5>
-                  <span>Gerente de Operaciones · Banco Unión</span>
+
+          <div class="testimonials-carousel">
+            <div class="testimonials-track" id="testTrack">
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> Infoactiva ha transformado nuestra gestión documental, reduciendo tiempos de búsqueda en un 70%.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>Carlos Mendoza</h5><span>Gerente de Operaciones · Banco Unión</span></div>
                 </div>
               </div>
-            </div>
-            <div class="testimonial-card fade-in-up" style="animation-delay: 0.2s;">
-              <div class="testimonial-quote"><i class="fas fa-quote-left"></i> La digitalización de nuestros archivos históricos fue impecable. Confianza y calidad absoluta.</div>
-              <div class="testimonial-author">
-                <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                <div>
-                  <h5>María Fernanda Ríos</h5>
-                  <span>Directora Administrativa · YPFB</span>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> La digitalización de nuestros archivos históricos fue impecable. Confianza y calidad absoluta.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>María Fernanda Ríos</h5><span>Directora Administrativa · YPFB</span></div>
                 </div>
               </div>
-            </div>
-            <div class="testimonial-card fade-in-up" style="animation-delay: 0.4s;">
-              <div class="testimonial-quote"><i class="fas fa-quote-left"></i> Excelente servicio de custodia. Nuestros documentos están seguros y siempre disponibles.</div>
-              <div class="testimonial-author">
-                <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
-                <div>
-                  <h5>Jorge Camacho</h5>
-                  <span>Jefe de Archivo · Gobierno Municipal</span>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> Excelente servicio de custodia. Nuestros documentos están seguros y siempre disponibles.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>Jorge Camacho</h5><span>Jefe de Archivo · Gobierno Municipal</span></div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> El equipo de Infoactiva entiende perfectamente las necesidades del sector público. Altamente recomendados.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>Ana Gutiérrez</h5><span>Directora de Archivo · Alcaldía de La Paz</span></div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> Redujimos el espacio físico ocupado por archivos en un 60% y ahora todo está a un clic de distancia.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>Roberto Salazar</h5><span>Gerente General · Seguros Illimani</span></div>
+                </div>
+              </div>
+
+              <div class="testimonial-card">
+                <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i> La seguridad con la que manejan nuestra información confidencial nos da total tranquilidad.</div>
+                <div class="testimonial-author">
+                  <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                  <div><h5>Patricia Vargas</h5><span>Auditora Interna · COTEL</span></div>
                 </div>
               </div>
             </div>
@@ -251,50 +498,101 @@
         </div>
       </section>
 
-      <!-- ===== SECCIÓN 6: CONTACTO (FONDO BLANCO) ===== -->
+      <!-- ===== CONTACTO ===== -->
       <section class="contact section-white" id="contacto">
         <div class="container">
-          <div class="contact-wrapper fade-in-up">
-            <div class="contact-header">
-              <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
-              <h2 class="section-title">¿Requiere mayor <span class="highlight">información?</span></h2>
-              <p>Estamos aquí para ayudarte. Comunícate con nosotros a través de cualquiera de nuestros canales.</p>
-              <a href="#" class="btn-primary"><i class="fas fa-phone-alt"></i> Contáctanos ahora</a>
-            </div>
-            <div class="contact-grid">
 
-              <div class="contact-item fade-in-up" style="animation-delay: 0.2s;">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h5>Santa Cruz</h5>
-                <p><a href="mailto:consultas.scz@infoactiva.com.bo">consultas.scz@infoactiva.com.bo</a></p>
-                <p><strong>78960752</strong></p>
-              </div>
-              <div class="contact-item fade-in-up" style="animation-delay: 0.3s;">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h5>La Paz</h5>
-                <p><a href="mailto:consultas.lp@infoactiva.com.bo">consultas.lp@infoactiva.com.bo</a></p>
-                <p><strong>77231547</strong></p>
-              </div>
-              <div class="contact-item fade-in-up" style="animation-delay: 0.4s;">
-                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h5>Cochabamba</h5>
-                <p><a href="mailto:consultas.cbba@infoactiva.com.bo">consultas.cbba@infoactiva.com.bo</a></p>
-                <p><strong>75838069</strong></p>
-              </div>
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
+            <h2 class="section-title">¿Requiere mayor <span class="highlight">información?</span></h2>
+            <p class="section-desc">Estamos aquí para ayudarte. Comunícate con nosotros a través de cualquiera de nuestros canales.</p>
+          </div>
+
+          <div class="contact-schedule">
+            <div class="contact-schedule-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-schedule-info">
+              <strong>Horario de atención</strong>
+              <span>Lun–Vie: 08:00 a.m. – 05:00 p.m. · Sáb: 09:00 a.m. – 12:30 p.m.</span>
             </div>
+          </div>
+
+          <div class="contact-cards">
+            <a href="https://wa.me/59178960752?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Infoactiva%20Santa%20Cruz" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-glow"></div>
+              <div class="contact-card-header">
+                <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <span class="contact-city-badge">Santa Cruz</span>
+              </div>
+              <h4>Santa Cruz</h4>
+              <p>consultas.scz@infoactiva.com.bo</p>
+              <div class="contact-phone"><i class="fas fa-phone-alt"></i><strong>78960752</strong></div>
+              <span class="contact-arrow"><i class="fab fa-whatsapp"></i></span>
+            </a>
+
+            <a href="https://wa.me/59177231547?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Infoactiva%20La%20Paz" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-glow"></div>
+              <div class="contact-card-header">
+                <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <span class="contact-city-badge">La Paz</span>
+              </div>
+              <h4>La Paz</h4>
+              <p>consultas.lp@infoactiva.com.bo</p>
+              <div class="contact-phone"><i class="fas fa-phone-alt"></i><strong>77231547</strong></div>
+              <span class="contact-arrow"><i class="fab fa-whatsapp"></i></span>
+            </a>
+
+            <a href="https://wa.me/59175838069?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Infoactiva%20Cochabamba" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-glow"></div>
+              <div class="contact-card-header">
+                <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <span class="contact-city-badge">Cochabamba</span>
+              </div>
+              <h4>Cochabamba</h4>
+              <p>consultas.cbba@infoactiva.com.bo</p>
+              <div class="contact-phone"><i class="fas fa-phone-alt"></i><strong>75838069</strong></div>
+              <span class="contact-arrow"><i class="fab fa-whatsapp"></i></span>
+            </a>
           </div>
         </div>
       </section>
 
     </main>
 
-    <!-- ===== WHATSAPP FLOTANTE ===== -->
-    <a href="#" class="whatsapp-float" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- ===== WHATSAPP WIDGET ===== -->
+    <div class="whatsapp-widget" id="whatsappWidget">
+      <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+          <div class="whatsapp-popup-header-left">
+            <div class="whatsapp-popup-avatar"><i class="fab fa-whatsapp"></i></div>
+            <div class="whatsapp-popup-info">
+              <strong>Infoactiva</strong>
+              <span>En línea</span>
+            </div>
+          </div>
+          <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="whatsapp-popup-body">
+          <div class="whatsapp-message">
+            <p>Hola 👋</p>
+            <p>¿En qué podemos ayudarte?</p>
+            <span class="whatsapp-message-time" id="waTime"></span>
+          </div>
+          <p class="whatsapp-schedule"><i class="fas fa-clock"></i> Lun–Vie 08:00–17:00 · Sáb 09:00–12:30</p>
+        </div>
+        <div class="whatsapp-popup-footer">
+          <a href="https://wa.me/59178960751?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n%20sobre%20el%20servicio" target="_blank" rel="noopener noreferrer" class="whatsapp-open-chat">
+            Abrir chat <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <button class="whatsapp-float" id="whatsappToggle" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-badge">1</span>
+      </button>
+    </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer section-dark fade-in">
+    <footer class="footer section-dark">
       <div class="footer-inner">
         <div class="footer-content">
           <div class="footer-brand">
@@ -302,6 +600,11 @@
               <img src="../video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img" />
             </a>
             <p>Gestión documental con experiencia, calidad y compromiso boliviano.</p>
+            <div class="footer-social-inline">
+              <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/infoactiva_/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@infoactiva_" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
           </div>
           <div class="footer-links">
             <div class="footer-col">
@@ -315,9 +618,10 @@
             <div class="footer-col">
               <h5>Soporte</h5>
               <ul>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="preguntas-frecuentes.html">FAQ</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#">Acceso Cliente</a></li>
+                <li><a href="acceso-cliente.html">Acceso Cliente</a></li>
+                <li class="footer-schedule-item"><i class="fas fa-clock"></i> Lun–Vie: 08:00 – 17:00 · Sáb: 09:00 – 12:30</li>
               </ul>
             </div>
             <div class="footer-col">
@@ -331,212 +635,14 @@
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz</p>
-          <div class="footer-social">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
         </div>
       </div>
     </footer>
 
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../JS/script.js"></script>
-  <script>
-    (function() {
-      // ===== LOADER =====
-      const loader = document.getElementById('loader');
-      const loaderBar = document.getElementById('loaderBar');
-      const loaderPercentage = document.getElementById('loaderPercentage');
-      const mainContent = document.getElementById('main-content');
-
-      let progress = 0;
-      const interval = setInterval(() => {
-        progress += Math.floor(Math.random() * 12) + 4;
-        if (progress >= 100) {
-          progress = 100;
-          clearInterval(interval);
-        }
-        loaderBar.style.width = progress + '%';
-        if (loaderPercentage) {
-          loaderPercentage.textContent = progress + '%';
-        }
-
-        if (progress === 100) {
-          setTimeout(() => {
-            loader.classList.add('hidden');
-            mainContent.style.display = 'block';
-            document.body.style.overflow = 'auto';
-            animateCounters();
-          }, 400);
-        }
-      }, 180);
-
-      // ===== CONTADORES ANIMADOS =====
-      function animateCounters() {
-        const counters = [
-          { el: document.getElementById('counter1'), target: 27000000, suffix: 'M' },
-          { el: document.getElementById('counter2'), target: 3, suffix: '' },
-          { el: document.getElementById('counter3'), target: 187523, suffix: '' }
-        ];
-
-        counters.forEach((counter) => {
-          if (!counter.el) return;
-          let current = 0;
-          const duration = 2000;
-          const steps = 70;
-          const stepValue = Math.ceil(counter.target / steps);
-
-          const timer = setInterval(() => {
-            current += stepValue;
-            if (current >= counter.target) {
-              current = counter.target;
-              clearInterval(timer);
-            }
-            let display = current;
-            if (counter.suffix === 'M' && current >= 1000000) {
-              display = (current / 1000000).toFixed(1) + 'M';
-            } else if (counter.suffix === '') {
-              display = current.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-            }
-            counter.el.textContent = display;
-          }, duration / steps);
-        });
-      }
-
-      // ===== VIDEO - SIN CONTROLES, BUCLE DE 0 A 50 SEGUNDOS =====
-      const video = document.getElementById('heroVideo');
-
-      if (video) {
-        video.removeAttribute('controls');
-        video.controls = false;
-        video.loop = true;
-
-        video.play().catch(function(error) {
-          console.log('Autoplay bloqueado:', error);
-        });
-
-        video.addEventListener('timeupdate', function() {
-          if (video.currentTime >= 50) {
-            video.currentTime = 0;
-          }
-        });
-
-        video.addEventListener('ended', function() {
-          video.currentTime = 0;
-          video.play();
-        });
-      }
-
-      // ===== MENÚ RESPONSIVE =====
-      document.getElementById('menuToggle')?.addEventListener('click', function() {
-        const nav = document.querySelector('.nav-list');
-        if (nav) {
-          if (nav.style.display === 'flex' && nav.style.position === 'absolute') {
-            nav.style.display = 'none';
-          } else {
-            nav.style.display = 'flex';
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '70px';
-            nav.style.left = '0';
-            nav.style.width = '100%';
-            nav.style.background = '#ffffff';
-            nav.style.padding = '1.5rem 2rem';
-            nav.style.gap = '0.8rem';
-            nav.style.backdropFilter = 'blur(12px)';
-            nav.style.borderRadius = '0 0 24px 24px';
-            nav.style.zIndex = '999';
-            nav.style.boxShadow = '0 8px 30px rgba(0,0,0,0.15)';
-            nav.style.alignItems = 'flex-start';
-            
-            const links = nav.querySelectorAll('.nav-link');
-            links.forEach(link => {
-              link.style.color = '#1e2a33';
-            });
-
-            const dropdowns = nav.querySelectorAll('.dropdown-menu-custom');
-            dropdowns.forEach(dd => {
-              dd.style.position = 'static';
-              dd.style.boxShadow = 'none';
-              dd.style.opacity = '1';
-              dd.style.visibility = 'visible';
-              dd.style.transform = 'none';
-              dd.style.paddingLeft = '1.5rem';
-              dd.style.background = 'transparent';
-              dd.style.border = 'none';
-              dd.style.minWidth = 'auto';
-            });
-          }
-        }
-      });
-
-      document.querySelectorAll('.nav-list a').forEach(link => {
-        link.addEventListener('click', () => {
-          const nav = document.querySelector('.nav-list');
-          if (window.innerWidth < 992 && nav) {
-            nav.style.display = 'none';
-            const icon = document.querySelector('.menu-toggle i');
-            if (icon) icon.className = 'fas fa-bars';
-          }
-        });
-      });
-
-      window.addEventListener('resize', function() {
-        const nav = document.querySelector('.nav-list');
-        if (window.innerWidth >= 992 && nav) {
-          nav.style.display = 'flex';
-          nav.style.position = 'static';
-          nav.style.flexDirection = 'row';
-          nav.style.background = 'transparent';
-          nav.style.padding = '0';
-          nav.style.gap = '2rem';
-          nav.style.backdropFilter = 'none';
-          nav.style.borderRadius = '0';
-          nav.style.width = 'auto';
-          nav.style.boxShadow = 'none';
-          nav.style.alignItems = 'center';
-          
-          const links = nav.querySelectorAll('.nav-link');
-          links.forEach(link => {
-            link.style.color = '';
-          });
-
-          const dropdowns = nav.querySelectorAll('.dropdown-menu-custom');
-          dropdowns.forEach(dd => {
-            dd.style.position = 'absolute';
-            dd.style.boxShadow = '0 12px 40px rgba(0,0,0,0.12)';
-            dd.style.opacity = '0';
-            dd.style.visibility = 'hidden';
-            dd.style.transform = 'translateY(10px)';
-            dd.style.paddingLeft = '0';
-            dd.style.background = '#ffffff';
-            dd.style.border = '1px solid rgba(0,0,0,0.04)';
-            dd.style.minWidth = '280px';
-          });
-        }
-      });
-
-      // ===== BOTÓN DESCUBRIR - SCROLL SUAVE A STATS =====
-      document.getElementById('btnDescubrir')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          const headerHeight = document.querySelector('.header')?.offsetHeight || 80;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-
-    })();
-  </script>
+  <script src="../JS/chatbot.js"></script>
 </body>
 </html>

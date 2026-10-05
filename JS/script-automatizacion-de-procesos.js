@@ -65,10 +65,10 @@
     if (!el) return;
 
     const phrases = [
-      'El 65% de las empresas pierde tiempo buscando documentos activos.',
-      'Cada día sin organización, tu archivo pierde valor.',
-      'Mientras tú buscas, tu competencia ya encontró.',
-      'Organizamos lo que otros descuidan.'
+      'El 60% de las empresas pierde competitividad por no automatizar.',
+      'Cada día sin automatizar, tus procesos pierden eficiencia.',
+      'Mientras tú dudas, tu competencia ya automatizó.',
+      'Impulsamos lo que otros estancan.'
     ];
 
     let phraseIndex = 0;
@@ -145,7 +145,7 @@
       }
     }
 
-    const container = document.getElementById('archivoCarousel');
+    const container = document.getElementById('automatizacionCarousel');
     if (container) {
       container.addEventListener('mouseenter', stopAuto);
       container.addEventListener('mouseleave', startAuto);

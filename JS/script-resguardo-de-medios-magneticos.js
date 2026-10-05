@@ -65,10 +65,10 @@
     if (!el) return;
 
     const phrases = [
-      'El 65% de las empresas pierde tiempo buscando documentos activos.',
-      'Cada día sin organización, tu archivo pierde valor.',
-      'Mientras tú buscas, tu competencia ya encontró.',
-      'Organizamos lo que otros descuidan.'
+      'El 40% de las empresas pierde backups por mal almacenamiento.',
+      'Cada día sin respaldo seguro, tu información está en riesgo.',
+      'Mientras tú confías, tus backups pueden fallar.',
+      'Protegemos lo que otros descuidan.'
     ];
 
     let phraseIndex = 0;
@@ -145,7 +145,7 @@
       }
     }
 
-    const container = document.getElementById('archivoCarousel');
+    const container = document.getElementById('resguardoCarousel');
     if (container) {
       container.addEventListener('mouseenter', stopAuto);
       container.addEventListener('mouseleave', startAuto);

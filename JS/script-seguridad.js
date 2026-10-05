@@ -65,10 +65,10 @@
     if (!el) return;
 
     const phrases = [
-      'El 65% de las empresas pierde tiempo buscando documentos activos.',
-      'Cada día sin organización, tu archivo pierde valor.',
-      'Mientras tú buscas, tu competencia ya encontró.',
-      'Organizamos lo que otros descuidan.'
+      'El 70% de las filtraciones ocurren por accesos no controlados.',
+      'Cada día sin protocolos, tu información está en riesgo.',
+      'Mientras tú confías, otros no protegen.',
+      'Protegemos lo que otros descuidan.'
     ];
 
     let phraseIndex = 0;
@@ -101,7 +101,7 @@
     type();
   }
 
-  // ===== CARRUSEL AUTOMÁTICO cada 2s =====
+  // ===== CARRUSEL AUTOMÁTICO (sin botones) =====
   function initCarousel() {
     const track = document.getElementById('carouselTrack');
     const dotsContainer = document.getElementById('carouselDots');
@@ -112,6 +112,7 @@
     let current = 0;
     let autoplayTimer = null;
 
+    // Crear dots
     if (dotsContainer) {
       slides.forEach((_, i) => {
         const dot = document.createElement('div');
@@ -133,6 +134,7 @@
 
     function next() { goTo(current + 1); }
 
+    // ===== AUTOPLAY cada 2 segundos =====
     function startAuto() {
       stopAuto();
       autoplayTimer = setInterval(next, 2000);
@@ -145,12 +147,14 @@
       }
     }
 
-    const container = document.getElementById('archivoCarousel');
+    // Pausar al hover, reanudar al salir
+    const container = document.getElementById('seguridadCarousel');
     if (container) {
       container.addEventListener('mouseenter', stopAuto);
       container.addEventListener('mouseleave', startAuto);
     }
 
+    // Soporte swipe en móvil
     let startX = 0;
     let isDragging = false;
 
@@ -170,6 +174,7 @@
       isDragging = false;
     });
 
+    // Iniciar autoplay
     startAuto();
   }
 
