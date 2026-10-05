@@ -3,62 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Noticias · Infoactiva</title>
 
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  >
-
-  <!-- Google Font - MONSERRAT -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- CSS -->
   <link rel="stylesheet" href="../CSS/styles-noticias-publicas.css">
 </head>
 
 <body>
 
-  <!-- =========================================================
-       CONTENIDO PRINCIPAL
-       ========================================================= -->
   <div id="main-content">
 
-    <!-- =======================================================
-         HEADER
-         ======================================================= -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
-
       <div class="header-inner">
 
-        <!-- LOGO -->
         <a href="index.html" class="logo">
-          <img
-            src="../video_imagenes/LOGO 1.jpg"
-            alt="Infoactiva"
-            class="logo-img"
-          >
+          <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img">
         </a>
 
-        <!-- NAVEGACIÓN -->
         <nav class="nav">
-
           <ul class="nav-list">
-
             <li class="nav-item">
               <a href="index.html" class="nav-link">Inicio <span class="arrow">▼</span></a>
               <ul class="dropdown-menu-custom">
@@ -72,8 +41,8 @@
                 <li><a href="custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
                 <li><a href="archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
                 <li><a href="digitalizacion.html"><i class="fas fa-file-image"></i> Digitalización de documentos</a></li>
-                <li><a href="desarrollo.html"><i class="fas fa-code"></i> Desarrollo de software</a></li>
-                <li><a href="resguardo.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
+                <li><a href="automatizacion_de_procesos.html"><i class="fas fa-code"></i> Desarrollo de software</a></li>
+                <li><a href="resguardo-de-medios-magneticos.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
                 <li><div class="dropdown-divider"></div></li>
                 <li><a href="seguridad.html"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
               </ul>
@@ -86,75 +55,52 @@
             </li>
 
             <li class="nav-item">
-              <a href="preguntas.html" class="nav-link"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a>
+              <a href="preguntas-frecuentes.html" class="nav-link">
+                <i class="fas fa-question-circle"></i> Preguntas Frecuentes
+              </a>
             </li>
 
             <li class="nav-item">
-              <a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a>
+              <a href="contacto.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Contacto
+              </a>
             </li>
-
           </ul>
-
         </nav>
 
-        <!-- ACCESO CLIENTE -->
         <a href="acceso-cliente.html" class="btn-client">
-          <i class="fas fa-user-lock"></i>
-          Acceso Cliente
+          <i class="fas fa-user-lock"></i> Acceso Cliente
         </a>
 
-        <!-- MENÚ RESPONSIVE -->
         <button class="menu-toggle" id="menuToggle">
           <i class="fas fa-bars"></i>
         </button>
 
       </div>
-
     </header>
 
-    <!-- =======================================================
-         CONTENIDO
-         ======================================================= -->
+    <!-- ===== CONTENIDO ===== -->
     <main>
 
-      <!-- =====================================================
-           HERO NOTICIAS
-           ===================================================== -->
+      <!-- HERO -->
       <section class="hero-noticias section-dark">
-
         <div class="container">
-
           <div class="hero-noticias-content">
-
             <span class="hero-badge">
               <i class="fas fa-newspaper"></i>
               Infoactiva
             </span>
-
-            <h1>
-              <span>Noticias</span> y Actualizaciones
-            </h1>
-
-            <p>
-              Mantente informado sobre las últimas novedades,
-              eventos y actualizaciones de Infoactiva.
-            </p>
-
+            <h1><span>Noticias</span> y Actualizaciones</h1>
+            <p>Mantente informado sobre las últimas novedades, eventos y actualizaciones de Infoactiva.</p>
           </div>
-
         </div>
-
       </section>
 
-      <!-- =====================================================
-           LISTA DE NOTICIAS
-           ===================================================== -->
+      <!-- LISTA DE NOTICIAS -->
       <section class="noticias-section section-white">
-
         <div class="container">
 
           <div class="noticias-header">
-
             <div class="noticias-header-left">
               <span class="section-tag">
                 <i class="fas fa-newspaper"></i>
@@ -174,30 +120,140 @@
                 >
               </div>
             </div>
-
           </div>
 
+          <!-- ============================================================
+               NOTICIAS (AGREGA MÁS COPIANDO UN <article> COMPLETO)
+               ============================================================ -->
           <div class="noticias-grid" id="noticiasGrid">
 
-            <!-- Las noticias se cargarán aquí dinámicamente -->
+            <!-- NOTICIA 1 -->
+            <article class="noticia-card"
+              data-titulo="Infoactiva celebra 15 años de innovación documental"
+              data-fecha="2026-09-01"
+              data-categoria="Eventos"
+              data-imagen="../video_imagenes/noticia-15anios.jpg"
+              data-descripcion="&lt;p&gt;Infoactiva cumple 15 años transformando la gestión documental en Bolivia con tecnología de vanguardia y un equipo comprometido.&lt;/p&gt;&lt;p&gt;A lo largo de estos años hemos acompañado a cientos de empresas en la digitalización, custodia y automatización de sus procesos documentales.&lt;/p&gt;"
+            >
+              <div class="noticia-card-image">
+                <img src="../video_imagenes/noticia-15anios.jpg" alt="15 años Infoactiva">
+                <span class="noticia-card-categoria">Eventos</span>
+              </div>
+              <div class="noticia-card-body">
+                <span class="noticia-card-fecha">
+                  <i class="fas fa-calendar-alt"></i> 01 Sep 2026
+                </span>
+                <h3 class="noticia-card-titulo">Infoactiva celebra 15 años de innovación documental</h3>
+                <p class="noticia-card-descripcion">
+                  Infoactiva cumple 15 años transformando la gestión documental en Bolivia con tecnología de vanguardia y un equipo comprometido.
+                </p>
+                <button class="btn-leer-mas">
+                  Leer más <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- NOTICIA 2 -->
+            <article class="noticia-card"
+              data-titulo="Nuevo sistema de digitalización con IA"
+              data-fecha="2026-08-25"
+              data-categoria="Tecnología"
+              data-imagen="../video_imagenes/noticia-ia.jpg"
+              data-descripcion="&lt;p&gt;Lanzamos nuestro nuevo sistema de digitalización impulsado por Inteligencia Artificial, que reduce los tiempos de procesamiento en un 70%.&lt;/p&gt;&lt;p&gt;Este sistema permite clasificar, indexar y validar documentos automáticamente, mejorando la precisión y reduciendo costos operativos.&lt;/p&gt;"
+            >
+              <div class="noticia-card-image">
+                <img src="../video_imagenes/noticia-ia.jpg" alt="Digitalización con IA">
+                <span class="noticia-card-categoria">Tecnología</span>
+              </div>
+              <div class="noticia-card-body">
+                <span class="noticia-card-fecha">
+                  <i class="fas fa-calendar-alt"></i> 25 Ago 2026
+                </span>
+                <h3 class="noticia-card-titulo">Nuevo sistema de digitalización con IA</h3>
+                <p class="noticia-card-descripcion">
+                  Lanzamos nuestro nuevo sistema de digitalización impulsado por Inteligencia Artificial, que reduce los tiempos de procesamiento en un 70%.
+                </p>
+                <button class="btn-leer-mas">
+                  Leer más <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
+
+            <!-- NOTICIA 3 -->
+            <article class="noticia-card"
+              data-titulo="Infoactiva presente en el Congreso de Archivística 2026"
+              data-fecha="2026-08-15"
+              data-categoria="Eventos"
+              data-imagen="../video_imagenes/noticia-congreso.jpg"
+              data-descripcion="&lt;p&gt;Nuestro equipo participó como expositor en el Congreso Nacional de Archivística, compartiendo las últimas tendencias en gestión documental.&lt;/p&gt;&lt;p&gt;Agradecemos a todos los asistentes y colegas que hicieron posible este encuentro.&lt;/p&gt;"
+            >
+              <div class="noticia-card-image">
+                <img src="../video_imagenes/noticia-congreso.jpg" alt="Congreso Archivística">
+                <span class="noticia-card-categoria">Eventos</span>
+              </div>
+              <div class="noticia-card-body">
+                <span class="noticia-card-fecha">
+                  <i class="fas fa-calendar-alt"></i> 15 Ago 2026
+                </span>
+                <h3 class="noticia-card-titulo">Infoactiva presente en el Congreso de Archivística 2026</h3>
+                <p class="noticia-card-descripcion">
+                  Nuestro equipo participó como expositor en el Congreso Nacional de Archivística, compartiendo las últimas tendencias en gestión documental.
+                </p>
+                <button class="btn-leer-mas">
+                  Leer más <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </article>
 
           </div>
+          <!-- ============================================================
+               FIN NOTICIAS
+               ============================================================ -->
 
         </div>
-
       </section>
 
     </main>
 
-    <!-- =======================================================
-         FOOTER
-         ======================================================= -->
-    <footer class="footer section-dark">
+    <!-- ===== MODAL DE NOTICIA ===== -->
+    <div class="noticia-modal" id="noticiaModal">
+      <div class="noticia-modal-content">
 
+        <button class="noticia-modal-close" id="modalClose" aria-label="Cerrar">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="noticia-modal-image" id="modalImage">
+          <img src="" alt="Imagen de la noticia" id="modalImg">
+          <span class="noticia-modal-categoria" id="modalCategoria"></span>
+        </div>
+
+        <div class="noticia-modal-body">
+          <div class="noticia-modal-meta">
+            <span class="noticia-modal-fecha">
+              <i class="fas fa-calendar-alt"></i>
+              <span id="modalFecha"></span>
+            </span>
+          </div>
+
+          <h2 class="noticia-modal-titulo" id="modalTitulo"></h2>
+          <div class="noticia-modal-descripcion" id="modalDescripcion"></div>
+
+          <div class="noticia-modal-footer">
+            <button class="btn-cerrar-noticia" id="btnCerrarNoticia">
+              <i class="fas fa-arrow-left"></i> Volver a las noticias
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer section-dark">
       <div class="footer-inner">
 
         <div class="footer-content">
-
           <div class="footer-brand">
             <a href="index.html" class="logo">
               <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img">
@@ -206,7 +262,6 @@
           </div>
 
           <div class="footer-links">
-
             <div class="footer-col">
               <h5>Empresa</h5>
               <ul>
@@ -215,18 +270,15 @@
                 <li><a href="servicios.html">Servicios</a></li>
               </ul>
             </div>
-
             <div class="footer-col">
               <h5>Soporte</h5>
               <ul>
-                <li><a href="preguntas.html">FAQ</a></li>
+                <li><a href="preguntas-frecuentes.html">FAQ</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="acceso-cliente.html">Acceso Cliente</a></li>
               </ul>
             </div>
-
           </div>
-
         </div>
 
         <div class="footer-bottom">
@@ -239,17 +291,11 @@
         </div>
 
       </div>
-
     </footer>
 
   </div>
 
-  <!-- =========================================================
-       JAVASCRIPT
-       ========================================================= -->
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
   <script src="../JS/script-noticias-publicas.js"></script>
 
 </body>

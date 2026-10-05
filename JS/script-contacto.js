@@ -1,6 +1,9 @@
 (function() {
   'use strict';
 
+  // ===== CONFIG =====
+const API_URL = '../php/contactos-api.php';
+
   // ===== BARRA DE PROGRESO =====
   const progressBar = document.getElementById('scrollProgress');
   window.addEventListener('scroll', () => {
@@ -65,10 +68,10 @@
     if (!el) return;
 
     const phrases = [
-      'El 65% de las empresas pierde tiempo buscando documentos activos.',
-      'Cada día sin organización, tu archivo pierde valor.',
-      'Mientras tú buscas, tu competencia ya encontró.',
-      'Organizamos lo que otros descuidan.'
+      'Escríbenos o llámanos al 78960750.',
+      'Llena el formulario y te responderemos a la brevedad.',
+      'Estamos listos para ayudarte con tu gestión documental.',
+      'Tu información merece la mejor protección.'
     ];
 
     let phraseIndex = 0;
@@ -101,76 +104,112 @@
     type();
   }
 
-  // ===== CARRUSEL AUTOMÁTICO cada 2s =====
-  function initCarousel() {
-    const track = document.getElementById('carouselTrack');
-    const dotsContainer = document.getElementById('carouselDots');
-    if (!track) return;
+  // ===== FORMULARIO =====
+  function initForm() {
+    const form = document.getElementById('contactForm');
+    const successBox = document.getElementById('formSuccess');
+    const btnNuevo = document.getElementById('btnNuevoMensaje');
+    if (!form) return;
 
-    const slides = track.querySelectorAll('.carousel-slide');
-    const total = slides.length;
-    let current = 0;
-    let autoplayTimer = null;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    if (dotsContainer) {
-      slides.forEach((_, i) => {
-        const dot = document.createElement('div');
-        dot.className = 'dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(dot);
+      let isValid = true;
+      const requiredFields = form.querySelectorAll('[required]');
+
+      requiredFields.forEach(field => {
+        const group = field.closest('.form-group');
+        let fieldValid = true;
+
+        if (!field.value.trim()) fieldValid = false;
+
+        if (field.type === 'email' && field.value.trim()) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(field.value.trim())) fieldValid = false;
+        }
+
+        if (!fieldValid) {
+          isValid = false;
+          if (group) group.classList.add('has-error');
+        } else {
+          if (group) group.classList.remove('has-error');
+        }
       });
-    }
 
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
-
-    function goTo(index) {
-      if (index < 0) index = total - 1;
-      if (index >= total) index = 0;
-      current = index;
-      track.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
-    }
-
-    function next() { goTo(current + 1); }
-
-    function startAuto() {
-      stopAuto();
-      autoplayTimer = setInterval(next, 2000);
-    }
-
-    function stopAuto() {
-      if (autoplayTimer) {
-        clearInterval(autoplayTimer);
-        autoplayTimer = null;
+      if (!isValid) {
+        const firstError = form.querySelector('.has-error');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const input = firstError.querySelector('input, select, textarea');
+          if (input) input.focus();
+        }
+        return;
       }
-    }
 
-    const container = document.getElementById('archivoCarousel');
-    if (container) {
-      container.addEventListener('mouseenter', stopAuto);
-      container.addEventListener('mouseleave', startAuto);
-    }
+      const formData = {
+        nombre: form.nombre.value.trim(),
+        email: form.email.value.trim(),
+        telefono: form.telefono.value.trim(),
+        servicio: form.servicio.value,
+        ciudad: form.ciudad.value,
+        empresa: form.empresa.value.trim(),
+        descripcion: form.descripcion.value.trim()
+      };
 
-    let startX = 0;
-    let isDragging = false;
+      const submitBtn = form.querySelector('.btn-submit');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
 
-    track.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      isDragging = true;
-    }, { passive: true });
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
 
-    track.addEventListener('touchend', (e) => {
-      if (!isDragging) return;
-      const endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) next();
-        else goTo(current - 1);
+        const result = await response.json();
+
+        if (result.success) {
+          try {
+            const contactos = JSON.parse(localStorage.getItem('infoactiva_contactos') || '[]');
+            contactos.push({ ...formData, id: result.id, fecha: new Date().toISOString() });
+            localStorage.setItem('infoactiva_contactos', JSON.stringify(contactos));
+          } catch (err) { /* ignorar */ }
+
+          form.style.display = 'none';
+          if (successBox) successBox.classList.add('active');
+        } else {
+          alert('Error: ' + (result.error || 'No se pudo enviar el mensaje'));
+        }
+      } catch (error) {
+        console.error('Error al enviar:', error);
+        alert('No se pudo conectar con el servidor. Verifica que XAMPP esté corriendo.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
       }
-      isDragging = false;
     });
 
-    startAuto();
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+      field.addEventListener('input', () => {
+        const group = field.closest('.form-group');
+        if (group) group.classList.remove('has-error');
+      });
+      field.addEventListener('change', () => {
+        const group = field.closest('.form-group');
+        if (group) group.classList.remove('has-error');
+      });
+    });
+
+    if (btnNuevo) {
+      btnNuevo.addEventListener('click', () => {
+        form.reset();
+        form.style.display = 'flex';
+        if (successBox) successBox.classList.remove('active');
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   }
 
   // ===== WHATSAPP WIDGET =====
@@ -210,7 +249,6 @@
     if (e.key === 'Escape' && waWidget) waWidget.classList.remove('open');
   });
 
-  // ===== SMOOTH SCROLL =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -223,9 +261,8 @@
     });
   });
 
-  // Iniciar
   initHeroParticles();
   initTypingEffect();
-  initCarousel();
+  initForm();
 
 })();

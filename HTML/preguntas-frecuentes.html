@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes · Infoactiva</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../CSS/styles-preguntas-frecuentes.css">
+</head>
+<body>
+
+<div id="main-content">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img">
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Inicio <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu-custom">
+              <li><a href="custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
+              <li><a href="archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
+              <li><a href="digitalizacion.html"><i class="fas fa-file-image"></i> Digitalización de documentos</a></li>
+              <li><a href="automatizacion_de_procesos.html"><i class="fas fa-code"></i> Desarrollo de software</a></li>
+              <li><a href="resguardo-de-medios-magneticos.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><a href="seguridad.html"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="noticias-publicas.html" class="nav-link">
+              <i class="fas fa-newspaper"></i> Noticias
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="preguntas-frecuentes.html" class="nav-link active">
+              <i class="fas fa-question-circle"></i> Preguntas Frecuentes
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link">
+              <i class="fas fa-envelope"></i> Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="acceso-cliente.html" class="btn-client">
+        <i class="fas fa-user-lock"></i> Acceso Cliente
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-preguntas section-dark">
+      <div class="container">
+        <div class="hero-preguntas-content">
+          <span class="hero-badge">
+            <i class="fas fa-question-circle"></i> Soporte
+          </span>
+          <h1>Preguntas <span>Frecuentes</span></h1>
+          <p>Encuentra respuestas claras y rápidas sobre nuestros servicios, procesos y estándares de seguridad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section-white fade-in">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">
+            <i class="fas fa-info-circle"></i> Información útil
+          </span>
+          <h2 class="section-title">
+            Todo lo que necesitas <span class="highlight">saber</span>
+          </h2>
+          <p class="section-desc">
+            Resolvemos las dudas más comunes sobre nuestra cobertura, seguridad, procesos y servicios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section-white">
+      <div class="container">
+        <div class="faq-grid">
+
+          <div class="faq-card" data-number="01">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿En qué ciudades se tiene servicio?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <p>Contamos actualmente con 3 sucursales en Bolivia:</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> En el departamento de La Paz.</li>
+                  <li><i class="fas fa-check"></i> En el departamento de Santa Cruz.</li>
+                  <li><i class="fas fa-check"></i> En el departamento de Cochabamba.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card" data-number="02">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿Qué me asegura que mis documentos están bien resguardados?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <p>INFOACTIVA cumple con una serie de procedimientos y Normativas de Seguridad Industrial y Corporativa, que incluyen:</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Personal de seguridad las 24 horas.</li>
+                  <li><i class="fas fa-check"></i> Sistemas de vigilancia monitoreados.</li>
+                  <li><i class="fas fa-check"></i> Sensores de humo y movimiento.</li>
+                  <li><i class="fas fa-check"></i> Cajas especialmente diseñadas para la custodia de documentos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card" data-number="03">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-clock"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿Cómo puedo tener mi documentación a tiempo cuando la solicite?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <p>Contamos con sistemas de solicitudes vía WEB y por WhatsApp, y los tiempos de entrega están normados y controlados. Contamos con una central de consultas a nivel nacional y se manejan 2 tipos de requerimientos:</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Solicitud de consulta normal.</li>
+                  <li><i class="fas fa-check"></i> Solicitud de consulta urgente.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card" data-number="04">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-headset"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿Cómo se atienden las consultas?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <p>La solicitud de consulta se realiza a la Central de Consultas vía sistema WEB. Existen 2 tipos de solicitudes:</p>
+
+                <div class="faq-highlight">
+                  <strong><i class="fas fa-clock"></i> Consulta Normal</strong>
+                  <p>Cuando la solicitud del documento es física, es entregada al día hábil siguiente de realizada la consulta. Si la solicitud es electrónica, hasta en 1 hora.</p>
+                </div>
+
+                <div class="faq-highlight highlight-urgent">
+                  <strong><i class="fas fa-bolt"></i> Consulta Urgente</strong>
+                  <p>Cuando la solicitud del documento es física, es entregada hasta en 2 a 3 horas de realizada la consulta. Si la solicitud es electrónica, hasta en 1 hora.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card" data-number="05">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-box"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿Qué características tienen las cajas?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <ul>
+                  <li><i class="fas fa-check"></i> Tamaño estándar internacional para la conservación documental (30x40x25).</li>
+                  <li><i class="fas fa-check"></i> Auto armable, de una sola pieza incluyendo la tapa.</li>
+                  <li><i class="fas fa-check"></i> Peso máximo de contenido documental: 22 kg.</li>
+                  <li><i class="fas fa-check"></i> Ranura para colocado de Precinto de Seguridad.</li>
+                  <li><i class="fas fa-check"></i> Código de barras (número de caja).</li>
+                  <li><i class="fas fa-check"></i> Fácil manipulación.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-card" data-number="06">
+            <button class="faq-card-header" type="button">
+              <div class="faq-card-top">
+                <div class="faq-card-icon"><i class="fas fa-th-large"></i></div>
+                <div class="faq-card-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <h3 class="faq-card-title">¿Qué servicios ofrecen?</h3>
+            </button>
+            <div class="faq-card-body">
+              <div class="faq-card-body-inner">
+                <ul>
+                  <li><i class="fas fa-check"></i> Custodia y Administración de Archivo.</li>
+                  <li><i class="fas fa-check"></i> Administración de Archivo en Sitio.</li>
+                  <li><i class="fas fa-check"></i> Digitalización de documentos.</li>
+                  <li><i class="fas fa-check"></i> BPM - Automatización de Procesos.</li>
+                  <li><i class="fas fa-check"></i> Administración de archivos de imágenes digitalizadas.</li>
+                  <li><i class="fas fa-check"></i> Resguardo de Medios Magnéticos.</li>
+                  <li><i class="fas fa-check"></i> Destrucción de documentos.</li>
+                  <li><i class="fas fa-check"></i> Organización documental e inventariado de documentos.</li>
+                  <li><i class="fas fa-check"></i> Asesoría en gestión documental.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section-dark">
+      <div class="container">
+        <div class="cta-content">
+          <span class="section-tag tag-light">
+            <i class="fas fa-rocket"></i> Infoactiva
+          </span>
+          <h2>¿No encontraste tu <span>respuesta</span>?</h2>
+          <p>Contáctanos y nuestro equipo te ayudará a resolver cualquier duda sobre nuestros servicios y procesos.</p>
+          <div class="cta-buttons">
+            <a href="contacto.html" class="btn-primary">
+              Contáctanos <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="index.html" class="btn-outline">
+              Volver al inicio <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="footer section-dark">
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="../video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img">
+          </a>
+          <p>Gestión documental con experiencia, calidad y compromiso boliviano.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Empresa</h5>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+              <li><a href="index.html#servicios">Servicios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Soporte</h5>
+            <ul>
+              <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="acceso-cliente.html">Acceso Cliente</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Legal</h5>
+            <ul>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../JS/script-preguntas-frecuentes.js"></script>
+
+</body>
+</html>

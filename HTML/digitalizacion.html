@@ -6,201 +6,77 @@
 
   <title>Digitalización de Documentos · Infoactiva</title>
 
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  >
-
-  <!-- Google Font - MONSERRAT -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- CSS -->
   <link rel="stylesheet" href="../CSS/styles-digitalizacion.css">
 </head>
 
 <body>
 
-  <!-- =========================================================
-       CONTENIDO PRINCIPAL
-       ========================================================= -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <div id="main-content">
 
-    <!-- =======================================================
-         HEADER
-         ======================================================= -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
-
       <div class="header-inner">
-
-        <!-- LOGO -->
         <a href="index.html" class="logo">
-          <img
-            src="../video_imagenes/LOGO 1.jpg"
-            alt="Infoactiva"
-            class="logo-img"
-          >
+          <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img">
         </a>
 
-        <!-- NAVEGACIÓN -->
         <nav class="nav">
-
           <ul class="nav-list">
-
-            <!-- INICIO -->
             <li class="nav-item">
-
-              <a href="index.html" class="nav-link">
-                Inicio
-                <span class="arrow">▼</span>
-              </a>
-
+              <a href="index.html" class="nav-link">Inicio <span class="arrow">▼</span></a>
               <ul class="dropdown-menu-custom">
-
-                <li>
-                  <a href="quienes-somos.html">
-                    <i class="fas fa-users"></i>
-                    Quiénes Somos
-                  </a>
-                </li>
-
+                <li><a href="quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
               </ul>
-
             </li>
-
-            <!-- SERVICIOS -->
             <li class="nav-item">
-
-              <a href="#" class="nav-link">
-                Servicios
-                <span class="arrow">▼</span>
-              </a>
-
+              <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
               <ul class="dropdown-menu-custom">
-
-                <li>
-                  <a href="custodia.html">
-                    <i class="fas fa-archive"></i>
-                    Administración y custodia de documentos
-                  </a>
-                </li>
-
-                <li>
-                  <a href="archivo-sitio.html">
-                    <i class="fas fa-building"></i>
-                    Administración de archivo en sitio
-                  </a>
-                </li>
-
-                <li>
-                  <a href="digitalizacion.html">
-                    <i class="fas fa-file-image"></i>
-                    Digitalización de documentos
-                  </a>
-                </li>
-
-                <li>
-                  <a href="desarrollo.html">
-                    <i class="fas fa-code"></i>
-                    Desarrollo de software
-                  </a>
-                </li>
-
-                <li>
-                  <a href="resguardo.html">
-                    <i class="fas fa-database"></i>
-                    Resguardo de medios magnéticos
-                  </a>
-                </li>
-
-                <li>
-                  <div class="dropdown-divider"></div>
-                </li>
-
-                <li>
-                  <a href="seguridad.html">
-                    <i class="fas fa-shield-alt"></i>
-                    Seguridad
-                  </a>
-                </li>
-
+                <li><a href="custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
+                <li><a href="archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
+                <li><a href="digitalizacion.html"><i class="fas fa-copy"></i> Digitalización de documentos</a></li>
+                <li><a href="automatizacion_de_procesos.html"><i class="fas fa-robot"></i> Automatización de procesos</a></li>
+                <li><a href="resguardo-de-medios-magneticos.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
+                <li><div class="dropdown-divider"></div></li>
+                <li><a href="seguridad.html"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
               </ul>
-
             </li>
-
-            <!-- NOTICIAS -->
-            <li class="nav-item">
-
-              <a href="noticias.html" class="nav-link">
-                <i class="fas fa-newspaper"></i>
-                Noticias
-              </a>
-
-            </li>
-
-            <!-- PREGUNTAS -->
-            <li class="nav-item">
-
-              <a href="preguntas.html" class="nav-link">
-                <i class="fas fa-question-circle"></i>
-                Preguntas Frecuentes
-              </a>
-
-            </li>
-
-            <!-- CONTACTO -->
-            <li class="nav-item">
-
-              <a href="contacto.html" class="nav-link">
-                <i class="fas fa-envelope"></i>
-                Contacto
-              </a>
-
-            </li>
-
+            <li class="nav-item"><a href="noticias-publicas.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="preguntas-frecuentes.html" class="nav-link"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
           </ul>
-
         </nav>
 
-        <!-- ACCESO CLIENTE -->
-        <a href="#" class="btn-client">
-          <i class="fas fa-user-lock"></i>
-          Acceso Cliente
-        </a>
+        <div class="header-actions">
+          <a href="acceso-cliente.html" class="btn-client">
+            <i class="fas fa-user-lock"></i> Acceso Cliente
+          </a>
+          <div class="social-links">
+            <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank" class="social-link facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/infoactiva_/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@infoactiva_" target="_blank" class="social-link tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
 
-        <!-- MENÚ RESPONSIVE -->
-        <button class="menu-toggle" id="menuToggle">
-          <i class="fas fa-bars"></i>
-        </button>
-
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
       </div>
-
     </header>
 
-    <!-- =======================================================
-         CONTENIDO
-         ======================================================= -->
+    <!-- ===== CONTENIDO ===== -->
     <main>
 
-      <!-- =====================================================
-           HERO
-           ===================================================== -->
+      <!-- ===== HERO ===== -->
       <section class="hero-digitalizacion section-dark">
+        <div class="hero-particles" id="heroParticles"></div>
 
-        <div class="container">
-
+        <div class="container position-relative">
           <div class="hero-digitalizacion-content">
 
             <span class="hero-badge">
@@ -212,28 +88,31 @@
               Digitalización de <span>Documentos</span>
             </h1>
 
-            <p>
-              El mecanismo más simple, eficiente y rentable para
-              consultar, administrar y almacenar tus documentos.
+            <p class="hero-subtitle">
+              <span class="typing-text" id="typingText"></span>
+              <span class="typing-cursor">|</span>
             </p>
 
+            <div class="hero-cta-group">
+              <a href="contacto.html" class="btn-hero-primary">
+                Solicita asesoría <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#intro" class="btn-hero-secondary">
+                Ver detalles <i class="fas fa-chevron-down"></i>
+              </a>
+            </div>
+
           </div>
-
         </div>
-
       </section>
 
-      <!-- =====================================================
-           INTRO - DESCRIPCIÓN
-           ===================================================== -->
-      <section class="intro section-white fade-in">
-
+      <!-- ===== INTRO CON CARRUSEL ===== -->
+      <section class="intro section-white" id="intro">
         <div class="container">
 
-          <div class="row align-items-center">
+          <div class="row align-items-center g-5">
 
             <div class="col-lg-6">
-
               <div class="intro-text">
 
                 <span class="section-tag">
@@ -259,15 +138,11 @@
                   los 7 días de la semana, desde cualquier lugar del mundo.
                 </p>
 
-                <p>
-                  El ingreso a la era Digital y nuestros años de experiencia,
-                  nos exige brindar un servicio integral en materia de
-                  digitalización, llevándonos a desarrollar tecnología propia,
-                  que facilite a nuestros clientes el acceso y administración
-                  de su flujo de información.
-                </p>
+                <div class="loss-aversion-banner">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  <span><strong>El 60% de las empresas pierde información crítica</strong> por no digitalizar a tiempo</span>
+                </div>
 
-                <!-- CARACTERÍSTICAS -->
                 <div class="intro-features">
 
                   <div class="intro-feature">
@@ -303,89 +178,107 @@
                 </div>
 
               </div>
-
             </div>
 
             <div class="col-lg-6">
+              <div class="intro-carousel-wrapper">
 
-              <div class="intro-image-wrapper">
+                <div class="carousel-container" id="digitalizacionCarousel">
+                  <div class="carousel-track" id="carouselTrack">
 
-                <div class="intro-image-decoration"></div>
+                    <div class="carousel-slide">
+                      <img src="../video_imagenes/Digitalizacion_1.jpg" alt="Digitalización 1"
+                           onerror="this.src='../video_imagenes/cajas_1.jpeg'">
+                      <div class="carousel-slide-overlay"></div>
+                      <div class="carousel-slide-caption">
+                        <i class="fas fa-file-image"></i>
+                        <div>
+                          <strong>Documentos al alcance</strong>
+                          <span>Acceso 24/7 desde cualquier lugar</span>
+                        </div>
+                      </div>
+                    </div>
 
-                <img
-                  src="../video_imagenes/digitalizacion.jpeg"
-                  alt="Digitalización de documentos"
-                  class="intro-main-image"
-                  onerror="this.src='../video_imagenes/cajas_1.jpeg'"
-                >
+                    <div class="carousel-slide">
+                      <img src="../video_imagenes/Digitalizacion_2.jpg" alt="Digitalización 2"
+                           onerror="this.src='../video_imagenes/cajas_1.jpeg'">
+                      <div class="carousel-slide-overlay"></div>
+                      <div class="carousel-slide-caption">
+                        <i class="fas fa-search"></i>
+                        <div>
+                          <strong>Búsqueda inteligente</strong>
+                          <span>Encuentra cualquier documento al instante</span>
+                        </div>
+                      </div>
+                    </div>
 
-                <div class="intro-image-label">
+                    <div class="carousel-slide">
+                      <img src="../video_imagenes/Digitalizacion_3.jpg" alt="Digitalización 3"
+                           onerror="this.src='../video_imagenes/cajas_1.jpeg'">
+                      <div class="carousel-slide-overlay"></div>
+                      <div class="carousel-slide-caption">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                          <strong>Seguridad garantizada</strong>
+                          <span>Información protegida con altos estándares</span>
+                        </div>
+                      </div>
+                    </div>
 
-                  <i class="fas fa-file-image"></i>
-
-                  <div>
-                    <strong>Transformación digital</strong>
-                    <span>Documentos al alcance de un clic</span>
                   </div>
 
+                  <div class="carousel-dots" id="carouselDots"></div>
                 </div>
 
               </div>
-
             </div>
 
           </div>
 
         </div>
-
       </section>
 
-      <!-- =====================================================
-           BENEFICIOS
-           ===================================================== -->
-      <section class="benefits section-dark fade-in">
+      <!-- ===== BENEFICIOS ===== -->
+      <section class="benefits section-dark">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
 
-        <div class="container">
+        <div class="container position-relative">
 
           <div class="section-header">
-
             <span class="section-tag tag-light">
-              <i class="fas fa-star"></i>
-              Beneficios
+              <i class="fas fa-star"></i> Beneficios
             </span>
-
             <h2 class="section-title">
               Ventajas de la <span class="highlight">digitalización</span>
             </h2>
-
             <p class="section-desc">
               Transforma tu gestión documental con nuestras soluciones
               de digitalización avanzada.
             </p>
-
           </div>
 
           <div class="benefits-grid">
 
-            <div class="benefit-card fade-in-up">
+            <div class="benefit-card">
               <div class="benefit-icon"><i class="fas fa-clock"></i></div>
               <h4>Acceso 24/7</h4>
               <p>Consulta tus documentos las 24 horas del día, los 7 días de la semana, desde cualquier lugar.</p>
             </div>
 
-            <div class="benefit-card fade-in-up" style="animation-delay: 0.1s;">
+            <div class="benefit-card">
               <div class="benefit-icon"><i class="fas fa-search"></i></div>
               <h4>Búsqueda rápida</h4>
               <p>Localiza cualquier documento en segundos con nuestro sistema de indexación inteligente.</p>
             </div>
 
-            <div class="benefit-card fade-in-up" style="animation-delay: 0.2s;">
+            <div class="benefit-card">
               <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
               <h4>Seguridad garantizada</h4>
               <p>Protegemos tu información digital con los más altos estándares de seguridad.</p>
             </div>
 
-            <div class="benefit-card fade-in-up" style="animation-delay: 0.3s;">
+            <div class="benefit-card">
               <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
               <h4>Sostenibilidad</h4>
               <p>Reduce el uso de papel y contribuye al cuidado del medio ambiente.</p>
@@ -394,59 +287,46 @@
           </div>
 
         </div>
-
       </section>
 
-      <!-- =====================================================
-           PROCESO
-           ===================================================== -->
-      <section class="process section-white fade-in">
-
+      <!-- ===== PROCESO ===== -->
+      <section class="process section-white">
         <div class="container">
 
           <div class="section-header">
-
             <span class="section-tag">
-              <i class="fas fa-tasks"></i>
-              Proceso
+              <i class="fas fa-tasks"></i> Proceso
             </span>
-
             <h2 class="section-title">
               ¿Cómo <span class="highlight">digitalizamos</span>?
             </h2>
-
             <p class="section-desc">
               Un proceso estructurado para garantizar la máxima calidad
               y eficiencia en la digitalización de tus documentos.
             </p>
-
           </div>
 
           <div class="process-steps">
 
-            <div class="process-step fade-in-up">
-              <div class="step-number"></div>
+            <div class="process-step">
               <div class="step-icon"><i class="fas fa-box-open"></i></div>
               <h4>Recepción</h4>
               <p>Recibimos y preparamos tus documentos físicos para el proceso de digitalización.</p>
             </div>
 
-            <div class="process-step fade-in-up" style="animation-delay: 0.1s;">
-              <div class="step-number"></div>
+            <div class="process-step">
               <div class="step-icon"><i class="fas fa-scanner"></i></div>
               <h4>Digitalización</h4>
               <p>Convertimos tus documentos en imágenes digitales de alta calidad y precisión.</p>
             </div>
 
-            <div class="process-step fade-in-up" style="animation-delay: 0.2s;">
-              <div class="step-number"></div>
+            <div class="process-step">
               <div class="step-icon"><i class="fas fa-tags"></i></div>
               <h4>Indexación</h4>
               <p>Clasificamos y etiquetamos tus documentos para una búsqueda rápida y eficiente.</p>
             </div>
 
-            <div class="process-step fade-in-up" style="animation-delay: 0.3s;">
-              <div class="step-number"></div>
+            <div class="process-step">
               <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
               <h4>Almacenamiento</h4>
               <p>Guardamos tus documentos en la nube para un acceso seguro y disponible 24/7.</p>
@@ -455,25 +335,74 @@
           </div>
 
         </div>
-
       </section>
 
-      <!-- =====================================================
-           CTA
-           ===================================================== -->
-      <section class="cta section-dark fade-in">
+      <!-- ===== COMPARACIÓN SOCIAL ===== -->
+      <section class="comparison section-dark">
+        <div class="blob blob-3"></div>
 
+        <div class="container position-relative">
+          <div class="section-header">
+            <span class="section-tag tag-light">
+              <i class="fas fa-balance-scale"></i> Comparación
+            </span>
+            <h2 class="section-title">
+              ¿Estás en la <span class="highlight">era digital</span>?
+            </h2>
+            <p class="section-desc">
+              La diferencia entre archivos físicos y documentos digitales.
+            </p>
+          </div>
+
+          <div class="social-comparison">
+            <div class="social-comparison-item critical">
+              <i class="fas fa-times-circle"></i>
+              <div>
+                <strong>Sin Infoactiva</strong>
+                <span>Archivos físicos · Búsqueda lenta · Riesgo de pérdida</span>
+              </div>
+            </div>
+            <div class="social-comparison-item success">
+              <i class="fas fa-check-circle"></i>
+              <div>
+                <strong>Con Infoactiva</strong>
+                <span>Digitalizado · Búsqueda en segundos · Acceso 24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="authority-badges">
+            <div class="authority-badge">
+              <i class="fas fa-certificate"></i>
+              <span>Procesos Certificados</span>
+            </div>
+            <div class="authority-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Estándares Internacionales</span>
+            </div>
+            <div class="authority-badge">
+              <i class="fas fa-lock"></i>
+              <span>Confidencialidad Garantizada</span>
+            </div>
+            <div class="authority-badge">
+              <i class="fas fa-award"></i>
+              <span>+15 años de experiencia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="cta section-white">
         <div class="container">
-
           <div class="cta-content">
 
-            <span class="section-tag tag-light">
-              <i class="fas fa-rocket"></i>
-              Infoactiva
+            <span class="section-tag">
+              <i class="fas fa-rocket"></i> Infoactiva
             </span>
 
             <h2>
-              Digitaliza tu <span>información</span> hoy
+              Digitaliza tu <span class="highlight">información</span> hoy
             </h2>
 
             <p>
@@ -481,193 +410,114 @@
               a la era digital con nuestras soluciones de digitalización.
             </p>
 
+            <div class="scarcity-wrapper">
+              <div class="scarcity-banner">
+                <i class="fas fa-clock"></i>
+                <span><strong>Atención limitada:</strong> solo 5 cupos disponibles este mes</span>
+              </div>
+            </div>
+
             <div class="cta-buttons">
-
               <a href="contacto.html" class="btn-primary">
-                Solicita una cotización
-                <i class="fas fa-arrow-right"></i>
+                Solicita una cotización <i class="fas fa-arrow-right"></i>
               </a>
-
               <a href="servicios.html" class="btn-outline">
-                Ver más servicios
-                <i class="fas fa-arrow-right"></i>
+                Ver más servicios <i class="fas fa-arrow-right"></i>
               </a>
-
             </div>
 
           </div>
-
         </div>
-
       </section>
 
     </main>
 
-    <!-- =======================================================
-         WHATSAPP
-         ======================================================= -->
-    <a
-      href="#"
-      class="whatsapp-float"
-      target="_blank"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- ===== WHATSAPP WIDGET ===== -->
+    <div class="whatsapp-widget" id="whatsappWidget">
+      <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+          <div class="whatsapp-popup-header-left">
+            <div class="whatsapp-popup-avatar"><i class="fab fa-whatsapp"></i></div>
+            <div class="whatsapp-popup-info">
+              <strong>Infoactiva</strong>
+              <span>En línea</span>
+            </div>
+          </div>
+          <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="whatsapp-popup-body">
+          <div class="whatsapp-message">
+            <p>Hola 👋</p>
+            <p>¿En qué podemos ayudarte?</p>
+            <span class="whatsapp-message-time" id="waTime"></span>
+          </div>
+        </div>
+        <div class="whatsapp-popup-footer">
+          <a href="https://wa.me/59178960751?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20digitalizaci%C3%B3n%20de%20documentos" target="_blank" rel="noopener noreferrer" class="whatsapp-open-chat">
+            Abrir chat <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <button class="whatsapp-float" id="whatsappToggle" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-badge">1</span>
+      </button>
+    </div>
 
-    <!-- =======================================================
-         FOOTER
-         ======================================================= -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer section-dark">
-
       <div class="footer-inner">
 
         <div class="footer-content">
-
-          <!-- MARCA -->
           <div class="footer-brand">
-
             <a href="index.html" class="logo">
-
-              <img
-                src="../video_imagenes/LOGO 2.png"
-                alt="Infoactiva"
-                class="logo-img"
-              >
-
+              <img src="../video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img">
             </a>
-
-            <p>
-              Gestión documental con experiencia,
-              calidad y compromiso boliviano.
-            </p>
-
+            <p>Gestión documental con experiencia, calidad y compromiso boliviano.</p>
+            <div class="footer-social-inline">
+              <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/infoactiva_/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@infoactiva_" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
           </div>
 
-          <!-- ENLACES -->
           <div class="footer-links">
-
-            <!-- EMPRESA -->
             <div class="footer-col">
-
               <h5>Empresa</h5>
-
               <ul>
-
-                <li>
-                  <a href="index.html">
-                    Inicio
-                  </a>
-                </li>
-
-                <li>
-                  <a href="quienes-somos.html">
-                    Quiénes Somos
-                  </a>
-                </li>
-
-                <li>
-                  <a href="servicios.html">
-                    Servicios
-                  </a>
-                </li>
-
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
               </ul>
-
             </div>
-
-            <!-- SOPORTE -->
             <div class="footer-col">
-
               <h5>Soporte</h5>
-
               <ul>
-
-                <li>
-                  <a href="preguntas.html">
-                    FAQ
-                  </a>
-                </li>
-
-                <li>
-                  <a href="contacto.html">
-                    Contacto
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    Acceso Cliente
-                  </a>
-                </li>
-
+                <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acceso-cliente.html">Acceso Cliente</a></li>
               </ul>
-
             </div>
-
-            <!-- LEGAL -->
             <div class="footer-col">
-
               <h5>Legal</h5>
-
               <ul>
-
-                <li>
-                  <a href="#">
-                    Política de privacidad
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#">
-                    Términos y condiciones
-                  </a>
-                </li>
-
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
               </ul>
-
             </div>
-
           </div>
-
         </div>
 
-        <!-- FOOTER BOTTOM -->
         <div class="footer-bottom">
-
-          <p>
-            &copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz
-          </p>
-
-          <div class="footer-social">
-
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-
-          </div>
-
+          <p>&copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz</p>
         </div>
 
       </div>
-
     </footer>
 
   </div>
 
-  <!-- =========================================================
-       JAVASCRIPT
-       ========================================================= -->
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
   <script src="../JS/script-digitalizacion.js"></script>
 
 </body>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contacto · Infoactiva</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS para las banderas de teléfono -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css">
+
+  <link rel="stylesheet" href="../CSS/styles-contacto.css">
+
+  <!-- Ajuste para que el campo de teléfono se vea bien integrado -->
+  <style>
+    .iti { width: 100%; }
+    .input-wrapper .iti input {
+      padding-left: 90px !important;
+      height: 100%;
+      border: none;
+      background: transparent;
+      width: 100%;
+      outline: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: inherit;
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div id="main-content">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <img src="../video_imagenes/LOGO 1.jpg" alt="Infoactiva" class="logo-img">
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Inicio <span class="arrow">▼</span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="quienes-somos.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Servicios <span class="arrow">▼</span></a>
+              <ul class="dropdown-menu-custom">
+                <li><a href="custodia.html"><i class="fas fa-archive"></i> Administración y custodia de documentos</a></li>
+                <li><a href="archivo-sitio.html"><i class="fas fa-building"></i> Administración de archivo en sitio</a></li>
+                <li><a href="digitalizacion.html"><i class="fas fa-copy"></i> Digitalización de documentos</a></li>
+                <li><a href="automatizacion_de_procesos.html"><i class="fas fa-robot"></i> Automatización de procesos</a></li>
+                <li><a href="resguardo-de-medios-magneticos.html"><i class="fas fa-database"></i> Resguardo de medios magnéticos</a></li>
+                <li><div class="dropdown-divider"></div></li>
+                <li><a href="seguridad.html"><i class="fas fa-shield-alt"></i> Seguridad</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="noticias-publicas.html" class="nav-link"><i class="fas fa-newspaper"></i> Noticias</a></li>
+            <li class="nav-item"><a href="preguntas-frecuentes.html" class="nav-link"><i class="fas fa-question-circle"></i> Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a href="contacto.html" class="nav-link active"><i class="fas fa-envelope"></i> Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="acceso-cliente.html" class="btn-client">
+            <i class="fas fa-user-lock"></i> Acceso Cliente
+          </a>
+          <div class="social-links">
+            <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank" class="social-link facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/infoactiva_/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@infoactiva_" target="_blank" class="social-link tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </header>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main>
+
+      <!-- ===== HERO ===== -->
+      <section class="hero-contacto section-dark">
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="container position-relative">
+          <div class="hero-contacto-content">
+
+            <span class="hero-badge">
+              <i class="fas fa-envelope"></i>
+              Contáctanos
+            </span>
+
+            <h1>
+              ¿Tienes alguna duda <span>acerca de nuestros servicios?</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              <span class="typing-text" id="typingText"></span>
+              <span class="typing-cursor">|</span>
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#formulario" class="btn-hero-primary">
+                Ir al formulario <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="https://wa.me/59178960750?text=Hola%2C%20quisiera%20informaci%C3%B3n" target="_blank" class="btn-hero-secondary">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== INFO RÁPIDA ===== -->
+      <section class="info-rapida section-white">
+        <div class="container">
+          <div class="info-rapida-grid">
+
+            <a href="tel:+59178960750" class="info-card">
+              <div class="info-card-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="info-card-text">
+                <strong>Llámanos</strong>
+                <span>+591 78960750</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/59178960750?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" class="info-card">
+              <div class="info-card-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="info-card-text">
+                <strong>WhatsApp</strong>
+                <span>Respuesta inmediata</span>
+              </div>
+            </a>
+
+            <a href="mailto:consultas.scz@infoactiva.com.bo" class="info-card">
+              <div class="info-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="info-card-text">
+                <strong>Escríbenos</strong>
+                <span>consultas.scz@infoactiva.com.bo</span>
+              </div>
+            </a>
+
+            <div class="info-card">
+              <div class="info-card-icon"><i class="fas fa-clock"></i></div>
+              <div class="info-card-text">
+                <strong>Horario</strong>
+                <span>Lun - Vie: 8:00 - 18:00</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FORMULARIO ===== -->
+      <section class="contacto-form-section section-white" id="formulario">
+        <div class="container">
+
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fas fa-paper-plane"></i> Formulario
+            </span>
+            <h2 class="section-title">
+              Cuéntanos qué <span class="highlight">necesitas</span>
+            </h2>
+            <p class="section-desc">
+              Llena el siguiente formulario y te responderemos a la brevedad posible.
+            </p>
+          </div>
+
+          <div class="form-wrapper">
+
+            <!-- FORMULARIO CON FORMSUBMIT -->
+            <form action="https://formsubmit.co/auxiliar.sistemas@infoactiva.com.bo" method="POST" id="contactForm" class="contact-form">
+
+              <!-- Configuración de FormSubmit -->
+              <input type="hidden" name="_captcha" value="false">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez" maxlength="80">
+                  </div>
+                  <span class="error-msg">Por favor ingresa tu nombre completo</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" required placeholder="Ej: juan@empresa.com" maxlength="100">
+                  </div>
+                  <span class="error-msg">Por favor ingresa un correo válido</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="telefono">Teléfono/Celular <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-phone input-icon"></i>
+                    <!-- AQUÍ ESTÁ EL CAMBIO: maxlength="15" y pattern para solo números -->
+                    <input type="tel" id="telefono" name="telefono" required maxlength="15" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                  <span class="error-msg">Por favor ingresa tu teléfono</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="empresa">Empresa <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-building input-icon"></i>
+                    <input type="text" id="empresa" name="empresa" required placeholder="Ej: Banco Unión S.A." maxlength="100">
+                  </div>
+                  <span class="error-msg">Por favor ingresa el nombre de tu empresa</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="servicio">Servicio Requerido <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-concierge-bell input-icon"></i>
+                    <select id="servicio" name="servicio" required>
+                      <option value="" disabled selected>Selecciona un servicio</option>
+                      <option value="Administración y custodia de documentos">Administración y custodia de documentos</option>
+                      <option value="Administración de archivo en sitio">Administración de archivo en sitio</option>
+                      <option value="Digitalización de documentos">Digitalización de documentos</option>
+                      <option value="Automatización de procesos">Automatización de procesos</option>
+                      <option value="Resguardo de medios magnéticos">Resguardo de medios magnéticos</option>
+                      <option value="Seguridad">Seguridad</option>
+                      <option value="Destrucción de documentos">Destrucción de documentos</option>
+                      <option value="Organización documental e inventariado">Organización documental e inventariado</option>
+                      <option value="Asesoría en gestión documental">Asesoría en gestión documental</option>
+                      <option value="Otro servicio">Otro servicio</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-arrow"></i>
+                  </div>
+                  <span class="error-msg">Por favor selecciona un servicio</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="ciudad">Ciudad <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-map-marker-alt input-icon"></i>
+                    <select id="ciudad" name="ciudad" required>
+                      <option value="" disabled selected>Selecciona un departamento</option>
+                      <option value="La Paz">La Paz</option>
+                      <option value="Santa Cruz">Santa Cruz</option>
+                      <option value="Cochabamba">Cochabamba</option>
+                      <option value="Oruro">Oruro</option>
+                      <option value="Potosí">Potosí</option>
+                      <option value="Chuquisaca">Chuquisaca</option>
+                      <option value="Tarija">Tarija</option>
+                      <option value="Beni">Beni</option>
+                      <option value="Pando">Pando</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-arrow"></i>
+                  </div>
+                  <span class="error-msg">Por favor selecciona un departamento</span>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="descripcion">Descripción <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fas fa-comment-alt input-icon"></i>
+                  <textarea id="descripcion" name="descripcion" rows="5" required placeholder="Cuéntanos brevemente qué necesitas..." maxlength="500"></textarea>
+                </div>
+                <span class="error-msg">Por favor describe tu necesidad</span>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span>Enviar mensaje</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="cta section-dark">
+        <div class="blob blob-3"></div>
+        <div class="container position-relative">
+          <div class="cta-content">
+
+            <span class="section-tag tag-light">
+              <i class="fas fa-rocket"></i> Infoactiva
+            </span>
+
+            <h2>
+              ¿Prefieres <span>escribirnos</span> directo?
+            </h2>
+
+            <p>
+              Nuestro equipo está listo para atenderte por WhatsApp
+              o por teléfono en el horario de oficina.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="https://wa.me/59178960750?text=Hola%2C%20quisiera%20una%20cotizaci%C3%B3n" target="_blank" class="btn-primary">
+                <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+              </a>
+              <a href="tel:+59178960750" class="btn-outline">
+                <i class="fas fa-phone-alt"></i> Llamar ahora
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== WHATSAPP WIDGET ===== -->
+    <div class="whatsapp-widget" id="whatsappWidget">
+      <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+          <div class="whatsapp-popup-header-left">
+            <div class="whatsapp-popup-avatar"><i class="fab fa-whatsapp"></i></div>
+            <div class="whatsapp-popup-info">
+              <strong>Infoactiva</strong>
+              <span>En línea</span>
+            </div>
+          </div>
+          <button class="whatsapp-popup-close" id="whatsappClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="whatsapp-popup-body">
+          <div class="whatsapp-message">
+            <p>Hola 👋</p>
+            <p>¿En qué podemos ayudarte?</p>
+            <span class="whatsapp-message-time" id="waTime"></span>
+          </div>
+        </div>
+        <div class="whatsapp-popup-footer">
+          <a href="https://wa.me/59178960750?text=Hola%2C%20quisiera%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="whatsapp-open-chat">
+            Abrir chat <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <button class="whatsapp-float" id="whatsappToggle" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-badge">1</span>
+      </button>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer section-dark">
+      <div class="footer-inner">
+
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="../video_imagenes/LOGO 2.png" alt="Infoactiva" class="logo-img">
+            </a>
+            <p>Gestión documental con experiencia, calidad y compromiso boliviano.</p>
+            <div class="footer-social-inline">
+              <a href="https://www.facebook.com/people/Infoactiva/61552479628038/?locale=es_LA#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/infoactiva_/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@infoactiva_" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-col">
+              <h5>Empresa</h5>
+              <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Soporte</h5>
+              <ul>
+                <li><a href="preguntas-frecuentes.html">FAQ</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acceso-cliente.html">Acceso Cliente</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Legal</h5>
+              <ul>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Infoactiva · La Paz · Cochabamba · Santa Cruz</p>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Librería para banderas y prefijos telefónicos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
+  <script>
+    // ===== INICIALIZAR BANDERAS DE TELÉFONO =====
+    const phoneInput = document.querySelector("#telefono");
+    const iti = window.intlTelInput(phoneInput, {
+      initialCountry: "bo", // Bolivia por defecto
+      preferredCountries: ["bo", "ar", "pe", "cl", "br", "co", "mx", "us", "es"],
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js"
+    });
+
+    // ===== FORZAR SOLO NÚMEROS EN EL CAMPO DE TELÉFONO =====
+    phoneInput.addEventListener("input", function() {
+      this.value = this.value.replace(/[^0-9]/g, "");
+      if (this.value.length > 15) {
+        this.value = this.value.slice(0, 15);
+      }
+    });
+
+    // ===== ANTES DE ENVIAR, PONER EL NÚMERO COMPLETO CON PREFIJO =====
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      if (phoneInput.value.trim() !== "") {
+        phoneInput.value = iti.getNumber();
+      }
+    });
+  </script>
+
+</body>
+</html>

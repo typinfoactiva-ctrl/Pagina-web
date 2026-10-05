@@ -179,16 +179,16 @@ body {
 .section-desc { font-size: 1rem; margin-top: 0.5rem; font-weight: 400; }
 
 /* ============================================================
-   HERO DIGITALIZACIÓN
+   HERO AUTOMATIZACIÓN
    ============================================================ */
-.hero-digitalizacion {
+.hero-automatizacion {
   padding: 8rem 0 6rem;
   background: linear-gradient(135deg, var(--pantone-546) 0%, var(--pantone-546-light) 100%);
   position: relative;
   overflow: hidden;
 }
 
-.hero-digitalizacion::before {
+.hero-automatizacion::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -213,7 +213,7 @@ body {
   100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
 }
 
-.hero-digitalizacion-content {
+.hero-automatizacion-content {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -243,7 +243,7 @@ body {
   50% { transform: translateY(-6px); }
 }
 
-.hero-digitalizacion-content h1 {
+.hero-automatizacion-content h1 {
   font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: -2px;
@@ -256,7 +256,7 @@ body {
   100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.hero-digitalizacion-content h1 span { color: var(--pantone-173); }
+.hero-automatizacion-content h1 span { color: var(--pantone-173); }
 
 .hero-subtitle {
   font-size: 1.2rem;
@@ -1123,7 +1123,7 @@ body {
   .social-link { width: 34px; height: 34px; font-size: 0.9rem; }
   .menu-toggle { display: block; margin-left: 0; }
 
-  .hero-digitalizacion-content h1 { font-size: 2.8rem; }
+  .hero-automatizacion-content h1 { font-size: 2.8rem; }
   .logo-img { height: 40px; }
 
   .intro-features { flex-direction: column; }
@@ -1192,8 +1192,8 @@ body {
   .header-inner { padding: 0 1rem !important; }
   .logo-img { height: 38px; }
 
-  .hero-digitalizacion { padding: 5rem 0 4rem; }
-  .hero-digitalizacion-content h1 { font-size: 2.3rem; }
+  .hero-automatizacion { padding: 5rem 0 4rem; }
+  .hero-automatizacion-content h1 { font-size: 2.3rem; }
   .hero-subtitle { min-height: 2.5em; font-size: 1rem; }
 
   .section-title { font-size: 2rem; }
@@ -1220,7 +1220,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .hero-digitalizacion-content h1 { font-size: 2rem; }
+  .hero-automatizacion-content h1 { font-size: 2rem; }
   .hero-cta-group { flex-direction: column; align-items: center; width: 100%; }
   .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
 
